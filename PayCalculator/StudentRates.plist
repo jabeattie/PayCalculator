@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>None</key>
+	<dict>
+		<key>name</key>
+		<string>None</string>
+		<key>rate</key>
+		<integer>0</integer>
+		<key>threshold</key>
+		<integer>0</integer>
+	</dict>
+	<key>Plan1</key>
+	<dict>
+		<key>name</key>
+		<string>None</string>
+		<key>rate</key>
+		<real>0.09</real>
+		<key>threshold</key>
+		<integer>17335</integer>
+	</dict>
+	<key>Plan2</key>
+	<dict>
+		<key>name</key>
+		<string>None</string>
+		<key>rate</key>
+		<real>0.09</real>
+		<key>threshold</key>
+		<integer>21000</integer>
+	</dict>
+</dict>
+</plist>

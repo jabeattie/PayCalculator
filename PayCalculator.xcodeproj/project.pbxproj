@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B5911211AC4BAB65A278191 /* Pods_PayCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54975012DA1DC0BDFFE751E2 /* Pods_PayCalculator.framework */; };
+		3052B33A2F791D255561690D /* Pods_PayCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705FCE92B7777E80AA4558FE /* Pods_PayCalculatorTests.framework */; };
+		4A055CA41E0596A400CB0F35 /* Individuals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A055CA31E0596A400CB0F35 /* Individuals.swift */; };
+		4A055CA81E059D3200CB0F35 /* savedIndividuals.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A055CA71E059D3200CB0F35 /* savedIndividuals.plist */; };
+		4A0CEE781DA7EB3200B3ACDA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CEE771DA7EB3200B3ACDA /* MenuViewController.swift */; };
+		4A0CEE7A1DAAA55D00B3ACDA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CEE791DAAA55D00B3ACDA /* SettingsViewController.swift */; };
+		4A0CEE7C1DAAC50900B3ACDA /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CEE7B1DAAC50900B3ACDA /* ChartViewController.swift */; };
+		4A28B7F91CF3799E00A05700 /* ReactiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28B7F81CF3799E00A05700 /* ReactiveButton.swift */; };
+		4A28B7FC1CF37E2200A05700 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28B7FB1CF37E2200A05700 /* HamburgerButton.swift */; };
+		4A2CE9A71DAB991700F7DAC6 /* ChartsNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CE9A61DAB991700F7DAC6 /* ChartsNumberFormatter.swift */; };
+		4A2CE9AB1DAD205600F7DAC6 /* Array+RemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CE9AA1DAD205600F7DAC6 /* Array+RemoveObject.swift */; };
 		4AA6FBE91CF0FFD800D3A8CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6FBE81CF0FFD800D3A8CB /* AppDelegate.swift */; };
 		4AA6FBEB1CF0FFD800D3A8CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6FBEA1CF0FFD800D3A8CB /* ViewController.swift */; };
 		4AA6FBEE1CF0FFD800D3A8CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA6FBEC1CF0FFD800D3A8CB /* Main.storyboard */; };
@@ -14,6 +25,24 @@
 		4AA6FBF31CF0FFD800D3A8CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA6FBF11CF0FFD800D3A8CB /* LaunchScreen.storyboard */; };
 		4AA6FBFE1CF0FFD800D3A8CB /* PayCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6FBFD1CF0FFD800D3A8CB /* PayCalculatorTests.swift */; };
 		4AA6FC091CF0FFD800D3A8CB /* PayCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6FC081CF0FFD800D3A8CB /* PayCalculatorUITests.swift */; };
+		4AA700661CF1EED7000675DE /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA700631CF1EED7000675DE /* Calculator.swift */; };
+		4AA700671CF1EED7000675DE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA700641CF1EED7000675DE /* Constants.swift */; };
+		4AA700681CF1EED7000675DE /* Individual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA700651CF1EED7000675DE /* Individual.swift */; };
+		4AA7006C1CF1EF18000675DE /* YearRates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AA7006B1CF1EF18000675DE /* YearRates.plist */; };
+		4AA7006E1CF1EF7B000675DE /* StudentRates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AA7006D1CF1EF7B000675DE /* StudentRates.plist */; };
+		4ADB004B1E50AE3300D7D33C /* SlidingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB004A1E50AE3300D7D33C /* SlidingTextField.swift */; };
+		4ADB004F1E50D2F700D7D33C /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB004E1E50D2F700D7D33C /* InputViewController.swift */; };
+		4ADB00511E50F37500D7D33C /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB00501E50F37500D7D33C /* EmptySegue.swift */; };
+		4ADB00531E50F66800D7D33C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB00521E50F66800D7D33C /* ContainerViewController.swift */; };
+		4ADB00551E5101A500D7D33C /* Double+CleanValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB00541E5101A500D7D33C /* Double+CleanValue.swift */; };
+		4ADB00571E5108B700D7D33C /* TaxYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB00561E5108B700D7D33C /* TaxYear.swift */; };
+		4ADB00591E51091600D7D33C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADB00581E51091600D7D33C /* User.swift */; };
+		4AEAD0911D96AE0200FFD31B /* SSASideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAD0901D96AE0200FFD31B /* SSASideMenu.swift */; };
+		4AEAD0BA1D96C14000FFD31B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAD0B91D96C14000FFD31B /* StringExtensions.swift */; };
+		4AEAD0BC1D96E95400FFD31B /* BarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAD0BB1D96E95400FFD31B /* BarsViewController.swift */; };
+		4AEAD0BE1D96EBB300FFD31B /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAD0BD1D96EBB300FFD31B /* BarView.swift */; };
+		4AEAD0C01D971CC300FFD31B /* Double+RoundToPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAD0BF1D971CC300FFD31B /* Double+RoundToPlaces.swift */; };
+		57633730094282A881B3C913 /* Pods_PayCalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E59C699FB80BFAF6D94282B /* Pods_PayCalculatorUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +62,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4AEAD08E1D96A1D800FFD31B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		4A055CA31E0596A400CB0F35 /* Individuals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Individuals.swift; sourceTree = "<group>"; };
+		4A055CA71E059D3200CB0F35 /* savedIndividuals.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = savedIndividuals.plist; sourceTree = "<group>"; };
+		4A0CEE771DA7EB3200B3ACDA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4A0CEE791DAAA55D00B3ACDA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4A0CEE7B1DAAC50900B3ACDA /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		4A28B7F81CF3799E00A05700 /* ReactiveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveButton.swift; sourceTree = "<group>"; };
+		4A28B7FB1CF37E2200A05700 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
+		4A2CE9A61DAB991700F7DAC6 /* ChartsNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsNumberFormatter.swift; sourceTree = "<group>"; };
+		4A2CE9AA1DAD205600F7DAC6 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
 		4AA6FBE51CF0FFD800D3A8CB /* PayCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA6FBE81CF0FFD800D3A8CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AA6FBEA1CF0FFD800D3A8CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +98,32 @@
 		4AA6FC041CF0FFD800D3A8CB /* PayCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA6FC081CF0FFD800D3A8CB /* PayCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCalculatorUITests.swift; sourceTree = "<group>"; };
 		4AA6FC0A1CF0FFD800D3A8CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AA700631CF1EED7000675DE /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		4AA700641CF1EED7000675DE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4AA700651CF1EED7000675DE /* Individual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Individual.swift; sourceTree = "<group>"; };
+		4AA7006B1CF1EF18000675DE /* YearRates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = YearRates.plist; sourceTree = "<group>"; };
+		4AA7006D1CF1EF7B000675DE /* StudentRates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StudentRates.plist; sourceTree = "<group>"; };
+		4ADB004A1E50AE3300D7D33C /* SlidingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingTextField.swift; sourceTree = "<group>"; };
+		4ADB004E1E50D2F700D7D33C /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		4ADB00501E50F37500D7D33C /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
+		4ADB00521E50F66800D7D33C /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		4ADB00541E5101A500D7D33C /* Double+CleanValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+CleanValue.swift"; sourceTree = "<group>"; };
+		4ADB00561E5108B700D7D33C /* TaxYear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxYear.swift; sourceTree = "<group>"; };
+		4ADB00581E51091600D7D33C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4AEAD0901D96AE0200FFD31B /* SSASideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSASideMenu.swift; sourceTree = "<group>"; };
+		4AEAD0B91D96C14000FFD31B /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		4AEAD0BB1D96E95400FFD31B /* BarsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarsViewController.swift; sourceTree = "<group>"; };
+		4AEAD0BD1D96EBB300FFD31B /* BarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
+		4AEAD0BF1D971CC300FFD31B /* Double+RoundToPlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+RoundToPlaces.swift"; sourceTree = "<group>"; };
+		54975012DA1DC0BDFFE751E2 /* Pods_PayCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E59C699FB80BFAF6D94282B /* Pods_PayCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		705FCE92B7777E80AA4558FE /* Pods_PayCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PayCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74BC7BAA137271F500012B2D /* Pods-PayCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayCalculator.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayCalculator/Pods-PayCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		85CDDEF47A44F699BF7DB329 /* Pods-PayCalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayCalculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayCalculatorTests/Pods-PayCalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A45BFAE1BEC1D1A4FB25E1F /* Pods-PayCalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayCalculatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PayCalculatorUITests/Pods-PayCalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		98EAC1AF474E414A8B2A300C /* Pods-PayCalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayCalculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayCalculatorTests/Pods-PayCalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC0CB349512EE62F47293781 /* Pods-PayCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayCalculatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayCalculatorUITests/Pods-PayCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE5A790F50262F302CE79259 /* Pods-PayCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PayCalculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PayCalculator/Pods-PayCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5911211AC4BAB65A278191 /* Pods_PayCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3052B33A2F791D255561690D /* Pods_PayCalculatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +147,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57633730094282A881B3C913 /* Pods_PayCalculatorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A0CEE741DA7B4E400B3ACDA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4AA6FBEA1CF0FFD800D3A8CB /* ViewController.swift */,
+				4ADB004E1E50D2F700D7D33C /* InputViewController.swift */,
+				4AEAD0BB1D96E95400FFD31B /* BarsViewController.swift */,
+				4A0CEE771DA7EB3200B3ACDA /* MenuViewController.swift */,
+				4A0CEE791DAAA55D00B3ACDA /* SettingsViewController.swift */,
+				4A0CEE7B1DAAC50900B3ACDA /* ChartViewController.swift */,
+				4ADB00521E50F66800D7D33C /* ContainerViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4A0CEE751DA7B4F200B3ACDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AA700631CF1EED7000675DE /* Calculator.swift */,
+				4AA700641CF1EED7000675DE /* Constants.swift */,
+				4AA700651CF1EED7000675DE /* Individual.swift */,
+				4A055CA31E0596A400CB0F35 /* Individuals.swift */,
+				4ADB00561E5108B700D7D33C /* TaxYear.swift */,
+				4ADB00581E51091600D7D33C /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4A0CEE761DA7B50800B3ACDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAD0BD1D96EBB300FFD31B /* BarView.swift */,
+				4ADB004A1E50AE3300D7D33C /* SlidingTextField.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4A28B7FA1CF37B1E00A05700 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4A28B7F81CF3799E00A05700 /* ReactiveButton.swift */,
+				4AEAD0B91D96C14000FFD31B /* StringExtensions.swift */,
+				4A28B7FB1CF37E2200A05700 /* HamburgerButton.swift */,
+				4AEAD0BF1D971CC300FFD31B /* Double+RoundToPlaces.swift */,
+				4A2CE9A61DAB991700F7DAC6 /* ChartsNumberFormatter.swift */,
+				4A2CE9AA1DAD205600F7DAC6 /* Array+RemoveObject.swift */,
+				4ADB00501E50F37500D7D33C /* EmptySegue.swift */,
+				4ADB00541E5101A500D7D33C /* Double+CleanValue.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		4AA6FBDC1CF0FFD800D3A8CB = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +212,8 @@
 				4AA6FBFC1CF0FFD800D3A8CB /* PayCalculatorTests */,
 				4AA6FC071CF0FFD800D3A8CB /* PayCalculatorUITests */,
 				4AA6FBE61CF0FFD800D3A8CB /* Products */,
+				CE061A88F54CE603AD19175E /* Pods */,
+				FA2FAC4B4525F271FEE45882 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +230,15 @@
 		4AA6FBE71CF0FFD800D3A8CB /* PayCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				4AA6FBE81CF0FFD800D3A8CB /* AppDelegate.swift */,
-				4AA6FBEA1CF0FFD800D3A8CB /* ViewController.swift */,
+				4AEAD08F1D96AE0200FFD31B /* SSASideMenu */,
+				4AA7006A1CF1EEFB000675DE /* DataFiles */,
+				4A28B7FA1CF37B1E00A05700 /* Extensions */,
+				4A0CEE751DA7B4F200B3ACDA /* Model */,
+				4A0CEE761DA7B50800B3ACDA /* Views */,
+				4A0CEE741DA7B4E400B3ACDA /* View Controllers */,
 				4AA6FBEC1CF0FFD800D3A8CB /* Main.storyboard */,
 				4AA6FBEF1CF0FFD800D3A8CB /* Assets.xcassets */,
-				4AA6FBF11CF0FFD800D3A8CB /* LaunchScreen.storyboard */,
-				4AA6FBF41CF0FFD800D3A8CB /* Info.plist */,
+				4AA700691CF1EEE2000675DE /* Supporting Files */,
 			);
 			path = PayCalculator;
 			sourceTree = "<group>";
@@ -125,6 +261,57 @@
 			path = PayCalculatorUITests;
 			sourceTree = "<group>";
 		};
+		4AA700691CF1EEE2000675DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4AA6FBE81CF0FFD800D3A8CB /* AppDelegate.swift */,
+				4AA6FBF11CF0FFD800D3A8CB /* LaunchScreen.storyboard */,
+				4AA6FBF41CF0FFD800D3A8CB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4AA7006A1CF1EEFB000675DE /* DataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4AA7006B1CF1EF18000675DE /* YearRates.plist */,
+				4AA7006D1CF1EF7B000675DE /* StudentRates.plist */,
+				4A055CA71E059D3200CB0F35 /* savedIndividuals.plist */,
+			);
+			name = DataFiles;
+			sourceTree = "<group>";
+		};
+		4AEAD08F1D96AE0200FFD31B /* SSASideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAD0901D96AE0200FFD31B /* SSASideMenu.swift */,
+			);
+			path = SSASideMenu;
+			sourceTree = "<group>";
+		};
+		CE061A88F54CE603AD19175E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE5A790F50262F302CE79259 /* Pods-PayCalculator.debug.xcconfig */,
+				74BC7BAA137271F500012B2D /* Pods-PayCalculator.release.xcconfig */,
+				98EAC1AF474E414A8B2A300C /* Pods-PayCalculatorTests.debug.xcconfig */,
+				85CDDEF47A44F699BF7DB329 /* Pods-PayCalculatorTests.release.xcconfig */,
+				CC0CB349512EE62F47293781 /* Pods-PayCalculatorUITests.debug.xcconfig */,
+				8A45BFAE1BEC1D1A4FB25E1F /* Pods-PayCalculatorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA2FAC4B4525F271FEE45882 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54975012DA1DC0BDFFE751E2 /* Pods_PayCalculator.framework */,
+				705FCE92B7777E80AA4558FE /* Pods_PayCalculatorTests.framework */,
+				6E59C699FB80BFAF6D94282B /* Pods_PayCalculatorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +319,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AA6FC0D1CF0FFD800D3A8CB /* Build configuration list for PBXNativeTarget "PayCalculator" */;
 			buildPhases = (
+				F26F7D2FBD6942476713F514 /* [CP] Check Pods Manifest.lock */,
 				4AA6FBE11CF0FFD800D3A8CB /* Sources */,
 				4AA6FBE21CF0FFD800D3A8CB /* Frameworks */,
 				4AA6FBE31CF0FFD800D3A8CB /* Resources */,
+				0DD434C2D89E67BA8B7288D8 /* [CP] Embed Pods Frameworks */,
+				3E19030C9D4AC7C8697315DA /* [CP] Copy Pods Resources */,
+				4AEAD08E1D96A1D800FFD31B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,9 +340,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AA6FC101CF0FFD800D3A8CB /* Build configuration list for PBXNativeTarget "PayCalculatorTests" */;
 			buildPhases = (
+				EBF129E7CBDB6B7588B3069F /* [CP] Check Pods Manifest.lock */,
 				4AA6FBF51CF0FFD800D3A8CB /* Sources */,
 				4AA6FBF61CF0FFD800D3A8CB /* Frameworks */,
 				4AA6FBF71CF0FFD800D3A8CB /* Resources */,
+				56430165BA8C7185EA7C7E5D /* [CP] Embed Pods Frameworks */,
+				F373DEAC58525FCAB9D95B7E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +361,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AA6FC131CF0FFD800D3A8CB /* Build configuration list for PBXNativeTarget "PayCalculatorUITests" */;
 			buildPhases = (
+				FB982091656B218210DBE8F6 /* [CP] Check Pods Manifest.lock */,
 				4AA6FC001CF0FFD800D3A8CB /* Sources */,
 				4AA6FC011CF0FFD800D3A8CB /* Frameworks */,
 				4AA6FC021CF0FFD800D3A8CB /* Resources */,
+				13FCAC2A88F9CB98F808805D /* [CP] Copy Pods Resources */,
+				5D8F86019CC88A94C7A9826F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,18 +385,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "James Beattie";
 				TargetAttributes = {
 					4AA6FBE41CF0FFD800D3A8CB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = U69Y38AA58;
+						LastSwiftMigration = 0800;
 					};
 					4AA6FBF81CF0FFD800D3A8CB = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4AA6FBE41CF0FFD800D3A8CB;
 					};
 					4AA6FC031CF0FFD800D3A8CB = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4AA6FBE41CF0FFD800D3A8CB;
 					};
 				};
@@ -230,8 +431,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AA6FBF31CF0FFD800D3A8CB /* LaunchScreen.storyboard in Resources */,
+				4AA7006C1CF1EF18000675DE /* YearRates.plist in Resources */,
+				4AA7006E1CF1EF7B000675DE /* StudentRates.plist in Resources */,
 				4AA6FBF01CF0FFD800D3A8CB /* Assets.xcassets in Resources */,
 				4AA6FBEE1CF0FFD800D3A8CB /* Main.storyboard in Resources */,
+				4A055CA81E059D3200CB0F35 /* savedIndividuals.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +455,188 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DD434C2D89E67BA8B7288D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PayCalculator/Pods-PayCalculator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayCalculator/Pods-PayCalculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13FCAC2A88F9CB98F808805D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayCalculatorUITests/Pods-PayCalculatorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E19030C9D4AC7C8697315DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayCalculator/Pods-PayCalculator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56430165BA8C7185EA7C7E5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayCalculatorTests/Pods-PayCalculatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D8F86019CC88A94C7A9826F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayCalculatorUITests/Pods-PayCalculatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBF129E7CBDB6B7588B3069F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PayCalculatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F26F7D2FBD6942476713F514 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PayCalculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F373DEAC58525FCAB9D95B7E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PayCalculatorTests/Pods-PayCalculatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB982091656B218210DBE8F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PayCalculatorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4AA6FBE11CF0FFD800D3A8CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AEAD0BE1D96EBB300FFD31B /* BarView.swift in Sources */,
+				4A0CEE7C1DAAC50900B3ACDA /* ChartViewController.swift in Sources */,
+				4ADB004B1E50AE3300D7D33C /* SlidingTextField.swift in Sources */,
+				4ADB00511E50F37500D7D33C /* EmptySegue.swift in Sources */,
+				4AEAD0BA1D96C14000FFD31B /* StringExtensions.swift in Sources */,
 				4AA6FBEB1CF0FFD800D3A8CB /* ViewController.swift in Sources */,
+				4A055CA41E0596A400CB0F35 /* Individuals.swift in Sources */,
+				4A2CE9AB1DAD205600F7DAC6 /* Array+RemoveObject.swift in Sources */,
+				4A0CEE781DA7EB3200B3ACDA /* MenuViewController.swift in Sources */,
 				4AA6FBE91CF0FFD800D3A8CB /* AppDelegate.swift in Sources */,
+				4AA700661CF1EED7000675DE /* Calculator.swift in Sources */,
+				4AA700671CF1EED7000675DE /* Constants.swift in Sources */,
+				4A28B7F91CF3799E00A05700 /* ReactiveButton.swift in Sources */,
+				4ADB004F1E50D2F700D7D33C /* InputViewController.swift in Sources */,
+				4AEAD0911D96AE0200FFD31B /* SSASideMenu.swift in Sources */,
+				4A2CE9A71DAB991700F7DAC6 /* ChartsNumberFormatter.swift in Sources */,
+				4ADB00591E51091600D7D33C /* User.swift in Sources */,
+				4ADB00551E5101A500D7D33C /* Double+CleanValue.swift in Sources */,
+				4AA700681CF1EED7000675DE /* Individual.swift in Sources */,
+				4A28B7FC1CF37E2200A05700 /* HamburgerButton.swift in Sources */,
+				4ADB00571E5108B700D7D33C /* TaxYear.swift in Sources */,
+				4AEAD0C01D971CC300FFD31B /* Double+RoundToPlaces.swift in Sources */,
+				4AEAD0BC1D96E95400FFD31B /* BarsViewController.swift in Sources */,
+				4ADB00531E50F66800D7D33C /* ContainerViewController.swift in Sources */,
+				4A0CEE7A1DAAA55D00B3ACDA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +705,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -371,8 +752,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -391,74 +774,97 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		4AA6FC0E1CF0FFD800D3A8CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE5A790F50262F302CE79259 /* Pods-PayCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = U69Y38AA58;
 				INFOPLIST_FILE = PayCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jabeattie.free.PayCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		4AA6FC0F1CF0FFD800D3A8CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74BC7BAA137271F500012B2D /* Pods-PayCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = U69Y38AA58;
 				INFOPLIST_FILE = PayCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jabeattie.free.PayCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		4AA6FC111CF0FFD800D3A8CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98EAC1AF474E414A8B2A300C /* Pods-PayCalculatorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PayCalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jabeattie.free.PayCalculatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PayCalculator.app/PayCalculator";
 			};
 			name = Debug;
 		};
 		4AA6FC121CF0FFD800D3A8CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CDDEF47A44F699BF7DB329 /* Pods-PayCalculatorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = PayCalculatorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jabeattie.free.PayCalculatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PayCalculator.app/PayCalculator";
 			};
 			name = Release;
 		};
 		4AA6FC141CF0FFD800D3A8CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC0CB349512EE62F47293781 /* Pods-PayCalculatorUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PayCalculatorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jabeattie.free.PayCalculatorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = PayCalculator;
 			};
 			name = Debug;
 		};
 		4AA6FC151CF0FFD800D3A8CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A45BFAE1BEC1D1A4FB25E1F /* Pods-PayCalculatorUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = PayCalculatorUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jabeattie.free.PayCalculatorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = PayCalculator;
 			};
 			name = Release;
@@ -482,6 +888,7 @@
 				4AA6FC0F1CF0FFD800D3A8CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4AA6FC101CF0FFD800D3A8CB /* Build configuration list for PBXNativeTarget "PayCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +897,7 @@
 				4AA6FC121CF0FFD800D3A8CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4AA6FC131CF0FFD800D3A8CB /* Build configuration list for PBXNativeTarget "PayCalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +906,7 @@
 				4AA6FC151CF0FFD800D3A8CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
