@@ -30,7 +30,15 @@ class InputViewController: UIViewController {
     let individual = Individual.sharedInstance
     
     let numberFormatter = NumberFormatter()
-
+    
+    init(viewModel: InputViewModel) {
+        super.init(nibName: String(describing: InputViewController.self), bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,6 +56,9 @@ class InputViewController: UIViewController {
     }
     
     func setup() {
+        title = "Calculator"
+        
+        calculate.layer.cornerRadius = 5
         
         numberFormatter.maximumFractionDigits = 0
         
@@ -79,10 +90,9 @@ class InputViewController: UIViewController {
     
     
     @IBAction func didTap(_ sender: UIButton) {
-        if sender == calculate {
-            delegate?.calculatePressed()
-        }
-        
+        processValues(sender)
+        let barsViewController = BarsViewController(viewModel: true)
+        self.navigationController?.pushViewController(barsViewController, animated: true)
     }
 
     @IBAction func processValues(_ sender: AnyObject) {
@@ -156,14 +166,14 @@ extension InputViewController : UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         guard let slidingTextField = textField as? SlidingTextField else { return }
-        slidingTextField.textColor = Constants.Colours.DarkGray
-        slidingTextField.animateBackground(color: Constants.Colours.BlueTint)
+        slidingTextField.textColor = Constants.Colours.navy
+        slidingTextField.animateBackground(color: Constants.Colours.teal)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let slidingTextField = textField as? SlidingTextField else { return }
         slidingTextField.animateBackgroundOut()
-        slidingTextField.textColor = Constants.Colours.BlueTint
+        slidingTextField.textColor = Constants.Colours.grey
     }
     
 }

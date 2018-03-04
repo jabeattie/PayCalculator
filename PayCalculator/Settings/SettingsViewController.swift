@@ -10,17 +10,24 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    @IBOutlet weak var menu: UIButton!
     @IBOutlet weak var timeFrame: UISegmentedControl!
     @IBOutlet weak var taxYear: UISegmentedControl!
         
     lazy var individual = Individual.sharedInstance
     lazy var user = User.sharedInstance
     
+    init(viewModel: SettingsViewModel) {
+        super.init(nibName: String(describing: SettingsViewController.self), bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "Settings"
         
         switch user.preferredTimeFrame {
         case .yearly: timeFrame.selectedSegmentIndex = 0
@@ -39,16 +46,6 @@ class SettingsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-
-    @IBAction func didTap(_ sender:UIButton) {
-        switch sender {
-        case menu:
-            self.sideMenuViewController?._presentLeftMenuViewController()
-        default:
-            break
-        }
     }
     
     @IBAction func timeFrameChanged(_ sender: UISegmentedControl) {

@@ -30,10 +30,17 @@ class Constants {
         static let OffWhite: UIColor = UIColor(red: 236/255.0, green: 240/255.0, blue: 241/255.0, alpha: 1.0)
         static let BlueTint: UIColor = UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1.0)
         
+        static let navy = UIColor(red: 15/255.0, green: 41/255.0, blue: 47/255.0, alpha: 1.0)
+        static let teal = UIColor(red: 20/255.0, green: 160/255.0, blue: 152/255.0, alpha: 1.0)
+        static let pink = UIColor(red: 203/255.0, green: 45/255.0, blue: 111/255.0, alpha: 1.0)
+        static let grey = UIColor(red: 204/255.0, green: 204/255.0, blue: 204/255.0, alpha: 1.0)
+        static let burgundy = UIColor(red: 80/255.0, green: 31/255.0, blue: 58/255.0, alpha: 1.0)
     }
+    
     
     static let taxCodeRegex = "(^[1-9]{1}[0-9]{0,5}[TLPVY]([MW]1){0,1}$)|(^K[1-9]{1}[0-9]{0,5}([MW]1){0,1}$)|(^((BR)|(OT)|(D0)|(NT)|(FT))([MW]1){0,1}$)"
     
     static let timeFrameChange: NSNotification.Name = NSNotification.Name(rawValue: "TimeFrameChangeNotification")
     static let taxYearChange: NSNotification.Name = NSNotification.Name(rawValue: "TaxYearChangeNotification")
 }
+

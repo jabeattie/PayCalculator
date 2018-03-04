@@ -37,6 +37,14 @@ class BarsViewController: UIViewController {
     
     let currencyFormatter = NumberFormatter()
     
+    init(viewModel: Bool) {
+        super.init(nibName: String(describing: BarsViewController.self), bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,9 +65,7 @@ class BarsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        delegate?.barsViewAppeared(callback: { [weak self] (animate) in
-            self?.updateDisplay(animated: animate)
-        })
+        updateDisplay(animated: animated)
     }
     
     func updateDisplay(animated: Bool) {

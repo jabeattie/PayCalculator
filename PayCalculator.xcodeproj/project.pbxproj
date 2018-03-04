@@ -18,6 +18,12 @@
 		4A28B7FC1CF37E2200A05700 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28B7FB1CF37E2200A05700 /* HamburgerButton.swift */; };
 		4A2CE9A71DAB991700F7DAC6 /* ChartsNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CE9A61DAB991700F7DAC6 /* ChartsNumberFormatter.swift */; };
 		4A2CE9AB1DAD205600F7DAC6 /* Array+RemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CE9AA1DAD205600F7DAC6 /* Array+RemoveObject.swift */; };
+		4AA0B106204C5D2400204D9E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0B105204C5D2400204D9E /* TabBarController.swift */; };
+		4AA0B108204C5D5400204D9E /* InputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0B107204C5D5400204D9E /* InputViewController.xib */; };
+		4AA0B10B204C5FDE00204D9E /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0B10A204C5FDE00204D9E /* InputViewModel.swift */; };
+		4AA0B10E204C6EF200204D9E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA0B10D204C6EF200204D9E /* SettingsViewModel.swift */; };
+		4AA0B110204C6F0000204D9E /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0B10F204C6F0000204D9E /* SettingsViewController.xib */; };
+		4AA0B113204C771800204D9E /* BarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA0B112204C771800204D9E /* BarsViewController.xib */; };
 		4AA6FBE91CF0FFD800D3A8CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6FBE81CF0FFD800D3A8CB /* AppDelegate.swift */; };
 		4AA6FBEB1CF0FFD800D3A8CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6FBEA1CF0FFD800D3A8CB /* ViewController.swift */; };
 		4AA6FBEE1CF0FFD800D3A8CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA6FBEC1CF0FFD800D3A8CB /* Main.storyboard */; };
@@ -85,6 +91,23 @@
 		4A28B7FB1CF37E2200A05700 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		4A2CE9A61DAB991700F7DAC6 /* ChartsNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsNumberFormatter.swift; sourceTree = "<group>"; };
 		4A2CE9AA1DAD205600F7DAC6 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
+		4AA0B105204C5D2400204D9E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4AA0B107204C5D5400204D9E /* InputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputViewController.xib; sourceTree = "<group>"; };
+		4AA0B10A204C5FDE00204D9E /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
+		4AA0B10D204C6EF200204D9E /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4AA0B10F204C6F0000204D9E /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		4AA0B112204C771800204D9E /* BarsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarsViewController.xib; sourceTree = "<group>"; };
+		4AA0B116204C954F00204D9E /* TitilliumWeb-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Bold.ttf"; sourceTree = "<group>"; };
+		4AA0B117204C954F00204D9E /* TitilliumWeb-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Italic.ttf"; sourceTree = "<group>"; };
+		4AA0B118204C955000204D9E /* TitilliumWeb-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-LightItalic.ttf"; sourceTree = "<group>"; };
+		4AA0B119204C955000204D9E /* TitilliumWeb-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBold.ttf"; sourceTree = "<group>"; };
+		4AA0B11A204C955100204D9E /* TitilliumWeb-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4AA0B11B204C955200204D9E /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
+		4AA0B11C204C955200204D9E /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4AA0B11D204C955300204D9E /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
+		4AA0B11E204C955400204D9E /* TitilliumWeb-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Light.ttf"; sourceTree = "<group>"; };
+		4AA0B11F204C955400204D9E /* TitilliumWeb-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		4AA0B120204C955500204D9E /* TitilliumWeb-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		4AA6FBE51CF0FFD800D3A8CB /* PayCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA6FBE81CF0FFD800D3A8CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AA6FBEA1CF0FFD800D3A8CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,12 +181,10 @@
 			isa = PBXGroup;
 			children = (
 				4AA6FBEA1CF0FFD800D3A8CB /* ViewController.swift */,
-				4ADB004E1E50D2F700D7D33C /* InputViewController.swift */,
-				4AEAD0BB1D96E95400FFD31B /* BarsViewController.swift */,
 				4A0CEE771DA7EB3200B3ACDA /* MenuViewController.swift */,
-				4A0CEE791DAAA55D00B3ACDA /* SettingsViewController.swift */,
 				4A0CEE7B1DAAC50900B3ACDA /* ChartViewController.swift */,
 				4ADB00521E50F66800D7D33C /* ContainerViewController.swift */,
+				4AA0B105204C5D2400204D9E /* TabBarController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -205,6 +226,35 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		4AA0B109204C5FCB00204D9E /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				4AA0B107204C5D5400204D9E /* InputViewController.xib */,
+				4ADB004E1E50D2F700D7D33C /* InputViewController.swift */,
+				4AA0B10A204C5FDE00204D9E /* InputViewModel.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		4AA0B10C204C6D1E00204D9E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4A0CEE791DAAA55D00B3ACDA /* SettingsViewController.swift */,
+				4AA0B10D204C6EF200204D9E /* SettingsViewModel.swift */,
+				4AA0B10F204C6F0000204D9E /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4AA0B111204C76F800204D9E /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				4AEAD0BB1D96E95400FFD31B /* BarsViewController.swift */,
+				4AA0B112204C771800204D9E /* BarsViewController.xib */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
 		4AA6FBDC1CF0FFD800D3A8CB = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +280,9 @@
 		4AA6FBE71CF0FFD800D3A8CB /* PayCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				4AA0B111204C76F800204D9E /* Results */,
+				4AA0B10C204C6D1E00204D9E /* Settings */,
+				4AA0B109204C5FCB00204D9E /* Input */,
 				4AEAD08F1D96AE0200FFD31B /* SSASideMenu */,
 				4AA7006A1CF1EEFB000675DE /* DataFiles */,
 				4A28B7FA1CF37B1E00A05700 /* Extensions */,
@@ -264,6 +317,17 @@
 		4AA700691CF1EEE2000675DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4AA0B11B204C955200204D9E /* TitilliumWeb-Black.ttf */,
+				4AA0B116204C954F00204D9E /* TitilliumWeb-Bold.ttf */,
+				4AA0B11A204C955100204D9E /* TitilliumWeb-BoldItalic.ttf */,
+				4AA0B11C204C955200204D9E /* TitilliumWeb-ExtraLight.ttf */,
+				4AA0B120204C955500204D9E /* TitilliumWeb-ExtraLightItalic.ttf */,
+				4AA0B117204C954F00204D9E /* TitilliumWeb-Italic.ttf */,
+				4AA0B11E204C955400204D9E /* TitilliumWeb-Light.ttf */,
+				4AA0B118204C955000204D9E /* TitilliumWeb-LightItalic.ttf */,
+				4AA0B11D204C955300204D9E /* TitilliumWeb-Regular.ttf */,
+				4AA0B119204C955000204D9E /* TitilliumWeb-SemiBold.ttf */,
+				4AA0B11F204C955400204D9E /* TitilliumWeb-SemiBoldItalic.ttf */,
 				4AA6FBE81CF0FFD800D3A8CB /* AppDelegate.swift */,
 				4AA6FBF11CF0FFD800D3A8CB /* LaunchScreen.storyboard */,
 				4AA6FBF41CF0FFD800D3A8CB /* Info.plist */,
@@ -433,7 +497,10 @@
 				4AA6FBF31CF0FFD800D3A8CB /* LaunchScreen.storyboard in Resources */,
 				4AA7006C1CF1EF18000675DE /* YearRates.plist in Resources */,
 				4AA7006E1CF1EF7B000675DE /* StudentRates.plist in Resources */,
+				4AA0B110204C6F0000204D9E /* SettingsViewController.xib in Resources */,
+				4AA0B108204C5D5400204D9E /* InputViewController.xib in Resources */,
 				4AA6FBF01CF0FFD800D3A8CB /* Assets.xcassets in Resources */,
+				4AA0B113204C771800204D9E /* BarsViewController.xib in Resources */,
 				4AA6FBEE1CF0FFD800D3A8CB /* Main.storyboard in Resources */,
 				4A055CA81E059D3200CB0F35 /* savedIndividuals.plist in Resources */,
 			);
@@ -613,6 +680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AEAD0BE1D96EBB300FFD31B /* BarView.swift in Sources */,
+				4AA0B106204C5D2400204D9E /* TabBarController.swift in Sources */,
 				4A0CEE7C1DAAC50900B3ACDA /* ChartViewController.swift in Sources */,
 				4ADB004B1E50AE3300D7D33C /* SlidingTextField.swift in Sources */,
 				4ADB00511E50F37500D7D33C /* EmptySegue.swift in Sources */,
@@ -626,6 +694,7 @@
 				4AA700671CF1EED7000675DE /* Constants.swift in Sources */,
 				4A28B7F91CF3799E00A05700 /* ReactiveButton.swift in Sources */,
 				4ADB004F1E50D2F700D7D33C /* InputViewController.swift in Sources */,
+				4AA0B10B204C5FDE00204D9E /* InputViewModel.swift in Sources */,
 				4AEAD0911D96AE0200FFD31B /* SSASideMenu.swift in Sources */,
 				4A2CE9A71DAB991700F7DAC6 /* ChartsNumberFormatter.swift in Sources */,
 				4ADB00591E51091600D7D33C /* User.swift in Sources */,
@@ -637,6 +706,7 @@
 				4AEAD0BC1D96E95400FFD31B /* BarsViewController.swift in Sources */,
 				4ADB00531E50F66800D7D33C /* ContainerViewController.swift in Sources */,
 				4A0CEE7A1DAAA55D00B3ACDA /* SettingsViewController.swift in Sources */,
+				4AA0B10E204C6EF200204D9E /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
