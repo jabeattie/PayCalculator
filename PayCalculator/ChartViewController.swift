@@ -70,7 +70,7 @@ class ChartViewController: UIViewController {
             dataValues.append(PieChartDataEntry(value: value.value, label: value.key.description))
         }
         
-        let dataSet = PieChartDataSet(values: dataValues, label: "")
+        let dataSet = PieChartDataSet(entries: dataValues, label: "")
         dataSet.xValuePosition = .insideSlice
         dataSet.yValuePosition = .insideSlice
         dataSet.valueTextColor = Constants.Colours.OffWhite

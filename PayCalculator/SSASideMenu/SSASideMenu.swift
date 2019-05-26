@@ -288,7 +288,7 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
                 hideViewController(controller)
             }
             setupMenuViewControllerMotionEffects()
-            view.bringSubview(toFront: contentViewContainer)
+            view.bringSubviewToFront(contentViewContainer)
         }
     }
     
@@ -301,7 +301,7 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
                 hideViewController(controller)
             }
             setupMenuViewControllerMotionEffects()
-            view.bringSubview(toFront: contentViewContainer)
+            view.bringSubviewToFront(contentViewContainer)
         }
     }
     
@@ -435,8 +435,8 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
         if side == .left {
             let centerXLandscape = CGFloat(contentViewInLandscapeOffsetCenterX) + (iOS8 ? CGFloat(view.frame.width) : CGFloat(view.frame.height))
             let centerXPortrait = CGFloat(contentViewInPortraitOffsetCenterX) + CGFloat(view.frame.width)
-            
-            let centerX = UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) ?  centerXLandscape : centerXPortrait
+          
+            let centerX = [.landscapeLeft, .landscapeRight].contains(UIApplication.shared.statusBarOrientation) ?  centerXLandscape : centerXPortrait
             
             contentViewContainer.center = CGPoint(x: centerX, y: contentViewContainer.center.y)
             
@@ -444,8 +444,8 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
             
             let centerXLandscape = -CGFloat(self.contentViewInLandscapeOffsetCenterX)
             let centerXPortrait = CGFloat(-self.contentViewInPortraitOffsetCenterX)
-            
-            let centerX = UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) ? centerXLandscape : centerXPortrait
+          
+            let centerX = [.landscapeLeft, .landscapeRight].contains(UIApplication.shared.statusBarOrientation) ?  centerXLandscape : centerXPortrait
             
             contentViewContainer.center = CGPoint(x: centerX, y: contentViewContainer.center.y)
         }
@@ -664,19 +664,19 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
     fileprivate func setupViewController(_ targetView: UIView, targetViewController: UIViewController?) {
         if let viewController = targetViewController {
             
-            addChildViewController(viewController)
+            addChild(viewController)
             viewController.view.frame = view.bounds
             viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             targetView.addSubview(viewController.view)
-            viewController.didMove(toParentViewController: self)
+            viewController.didMove(toParent: self)
             
         }
     }
     
     fileprivate func hideViewController(_ targetViewController: UIViewController) {
-        targetViewController.willMove(toParentViewController: nil)
+        targetViewController.willMove(toParent: nil)
         targetViewController.view.removeFromSuperview()
-        targetViewController.removeFromParentViewController()
+        targetViewController.removeFromParent()
     }
     
     // MARK : Layout
@@ -687,7 +687,7 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
             return
         } else {
             contentButton.addTarget(self, action: #selector(SSASideMenu.hideMenuViewController as (SSASideMenu) -> () -> ()), for:.touchUpInside)
-            contentButton.autoresizingMask = UIViewAutoresizing()
+            contentButton.autoresizingMask = UIView.AutoresizingMask()
             contentButton.frame = contentViewContainer.bounds
             contentButton.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             contentButton.tag = 101
@@ -836,8 +836,8 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
                 
                 let centerXLandscape = CGFloat(contentViewInLandscapeOffsetCenterX) + (iOS8 ? CGFloat(view.frame.width) : CGFloat(view.frame.height))
                 let centerXPortrait = CGFloat(contentViewInPortraitOffsetCenterX) + CGFloat(view.frame.width)
-                
-                let centerX = UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) ?  centerXLandscape : centerXPortrait
+              
+                let centerX = [.landscapeLeft, .landscapeRight].contains(UIApplication.shared.statusBarOrientation) ?  centerXLandscape : centerXPortrait
                 
                 center = CGPoint(x: centerX, y: contentViewContainer.center.y)
                 
@@ -845,8 +845,8 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
                 
                 let centerXLandscape = -CGFloat(self.contentViewInLandscapeOffsetCenterX)
                 let centerXPortrait = CGFloat(-self.contentViewInPortraitOffsetCenterX)
-                
-                let centerX = UIInterfaceOrientationIsLandscape(UIApplication.shared.statusBarOrientation) ? centerXLandscape : centerXPortrait
+              
+                let centerX = [.landscapeLeft, .landscapeRight].contains(UIApplication.shared.statusBarOrientation) ?  centerXLandscape : centerXPortrait
                 
                 center = CGPoint(x: centerX, y: contentViewContainer.center.y)
             }
@@ -1000,7 +1000,7 @@ class SSASideMenu: UIViewController, UIGestureRecognizerDelegate {
                 delta = point.x / view.frame.size.width
             }
             
-            delta = min(fabs(delta), 1.6)
+            delta = min(abs(delta), 1.6)
             
             var contentViewScale: CGFloat = type == .scale ? 1 - ((1 - CGFloat(contentViewScaleValue)) * delta) : 1
             

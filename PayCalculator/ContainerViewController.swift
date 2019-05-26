@@ -38,18 +38,18 @@ class ContainerViewController: UIViewController {
         if (segue.identifier == Segue.input.rawValue) {
             guard let inputViewController = segue.destination as? InputViewController else { return }
             inputViewController.delegate = self
-            if (childViewControllers.count > 0) {
-                swapFromViewController(fromViewController: childViewControllers[0], toViewController: inputViewController)
+          if (children.count > 0) {
+            swapFromViewController(fromViewController: children[0], toViewController: inputViewController)
             } else {
-                addChildViewController(inputViewController)
+            addChild(inputViewController)
                 inputViewController.view.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
                 view.addSubview(inputViewController.view)
-                inputViewController.didMove(toParentViewController: self)
+            inputViewController.didMove(toParent: self)
             }
         } else if (segue.identifier == Segue.bars.rawValue) {
             guard let barsViewController = segue.destination as? BarsViewController else { return }
             barsViewController.delegate = self
-            swapFromViewController(fromViewController: childViewControllers[0], toViewController: barsViewController)
+          swapFromViewController(fromViewController: children[0], toViewController: barsViewController)
         }
     }
     
@@ -58,13 +58,13 @@ class ContainerViewController: UIViewController {
     }
     
     func swapFromViewController(fromViewController: UIViewController, toViewController: UIViewController) {
-        toViewController.view.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-        fromViewController.willMove(toParentViewController: nil)
-        addChildViewController(toViewController)
-        transition(from: fromViewController, to: toViewController, duration: 0.0, options: UIViewAnimationOptions.transitionCrossDissolve, animations: nil) { (finished) in
-            fromViewController.removeFromParentViewController()
-            toViewController.didMove(toParentViewController: self)
-        }
+      toViewController.view.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+      fromViewController.willMove(toParent: nil)
+      addChild(toViewController)
+      transition(from: fromViewController, to: toViewController, duration: 0.0, options: .transitionCrossDissolve, animations: nil) { (finished) in
+        fromViewController.removeFromParent()
+        toViewController.didMove(toParent: self)
+      }
     }
     
     func swapViewControllers() {

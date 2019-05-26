@@ -11,7 +11,7 @@ import Foundation
 extension Array where Element: Equatable {
     
     mutating func removeObject(object: Element) -> Bool {
-        if let index = index(of: object) {
+      if let index = firstIndex(of: object) {
             remove(at: index)
             return true
         }

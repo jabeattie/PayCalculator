@@ -51,9 +51,9 @@ class InputViewController: UIViewController {
         
         numberFormatter.maximumFractionDigits = 0
         
-        salary.attributedPlaceholder = NSAttributedString(string: "25000", attributes: [NSAttributedStringKey.foregroundColor: Constants.Colours.PaleBlue])
-        taxcode.attributedPlaceholder = NSAttributedString(string: "1100L", attributes: [NSAttributedStringKey.foregroundColor: Constants.Colours.PaleBlue])
-        pension.attributedPlaceholder = NSAttributedString(string: "0%", attributes: [NSAttributedStringKey.foregroundColor: Constants.Colours.PaleBlue])
+        salary.attributedPlaceholder = NSAttributedString(string: "25000", attributes: [.foregroundColor: Constants.Colours.PaleBlue])
+        taxcode.attributedPlaceholder = NSAttributedString(string: "1100L", attributes: [.foregroundColor: Constants.Colours.PaleBlue])
+        pension.attributedPlaceholder = NSAttributedString(string: "0%", attributes: [.foregroundColor: Constants.Colours.PaleBlue])
         
         salary.delegate = self
         taxcode.delegate = self
@@ -130,7 +130,7 @@ class InputViewController: UIViewController {
 extension InputViewController : UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let characterSet: CharacterSet!
+        var characterSet: CharacterSet!
         switch textField {
         case salary:
             characterSet = CharacterSet.decimalDigits
