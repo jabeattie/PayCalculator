@@ -9,9 +9,8 @@
 import UIKit
 import pop
 
-
-protocol BarsViewControllerDelegate {
-    func barsViewAppeared(callback: ((Bool) -> ())?)
+protocol BarsViewControllerDelegate: class {
+    func barsViewAppeared(callback: ((Bool) -> Void)?)
 }
 
 class BarsViewController: UIViewController {
@@ -30,7 +29,7 @@ class BarsViewController: UIViewController {
     
     @IBOutlet weak var timeFrame: UISegmentedControl!
     
-    var delegate: BarsViewControllerDelegate?
+    weak var delegate: BarsViewControllerDelegate?
     
     lazy var individual = Individual.sharedInstance
     var individuals = Individuals.sharedInstance
@@ -67,20 +66,20 @@ class BarsViewController: UIViewController {
         let values = individual.money.getValues(.value)
         let percent = individual.money.getValues(.percent)
         
-        pension.text = "£\(currencyFormatter.string(from: values[.Pension]! as NSNumber)!)"
-        pensionBar.change(percent: percent[.Pension]!, animated: animated)
+        pension.text = "£\(currencyFormatter.string(from: values[.pension]! as NSNumber)!)"
+        pensionBar.change(percent: percent[.pension]!, animated: animated)
         
-        tax.text = "£\(currencyFormatter.string(from: values[.Tax]! as NSNumber)!)"
-        taxBar.change(percent: percent[.Tax]!, animated: animated)
+        tax.text = "£\(currencyFormatter.string(from: values[.tax]! as NSNumber)!)"
+        taxBar.change(percent: percent[.tax]!, animated: animated)
         
-        ni.text = "£\(currencyFormatter.string(from: values[.NI]! as NSNumber)!)"
-        niBar.change(percent: percent[.NI]!, animated: animated)
+        ni.text = "£\(currencyFormatter.string(from: values[.ni]! as NSNumber)!)"
+        niBar.change(percent: percent[.ni]!, animated: animated)
         
-        studentLoan.text = "£\(currencyFormatter.string(from: values[.StudentLoan]! as NSNumber)!)"
-        studentLoanBar.change(percent: percent[.StudentLoan]!, animated: animated)
+        studentLoan.text = "£\(currencyFormatter.string(from: values[.studentLoan]! as NSNumber)!)"
+        studentLoanBar.change(percent: percent[.studentLoan]!, animated: animated)
         
-        takeHomePay.text = "£\(currencyFormatter.string(from: values[.TakeHomePay]! as NSNumber)!)"
-        takeHomePayBar.change(percent: percent[.TakeHomePay]!, animated: animated)
+        takeHomePay.text = "£\(currencyFormatter.string(from: values[.takeHomePay]! as NSNumber)!)"
+        takeHomePayBar.change(percent: percent[.takeHomePay]!, animated: animated)
     }
     
     @IBAction func timeFrameChanged(_ sender: UISegmentedControl) {
@@ -100,5 +99,3 @@ class BarsViewController: UIViewController {
     }
 
 }
-
-

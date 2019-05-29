@@ -10,10 +10,10 @@ import UIKit
 
 class Constants {
     enum Segue: String {
-        case DataEntry
-        case Values
-        case Charts
-        
+        case dataEntry
+        case values
+        case charts
+
         var identifier: String {
             return "\(self)EmbedSegue"
         }
@@ -29,11 +29,10 @@ class Constants {
         static let DarkGray: UIColor = UIColor(red: 20/255.0, green: 28/255.0, blue: 36/255.0, alpha: 1.0)
         static let OffWhite: UIColor = UIColor(red: 236/255.0, green: 240/255.0, blue: 241/255.0, alpha: 1.0)
         static let BlueTint: UIColor = UIColor(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1.0)
-        
     }
     
-    static let taxCodeRegex = "(^[1-9]{1}[0-9]{0,5}[TLPVY]([MW]1){0,1}$)|(^K[1-9]{1}[0-9]{0,5}([MW]1){0,1}$)|(^((BR)|(OT)|(D0)|(NT)|(FT))([MW]1){0,1}$)"
-    
+  static let taxCodeRegex = "(^[1-9]{1}[0-9]{0,5}[TLPVY]([MW]1){0,1}$)|(^K[1-9]{1}[0-9]{0,5}([MW]1){0,1}$)|(^((BR)|(OT)|(D0)|(NT)|(FT))([MW]1){0,1}$)" // swiftlint:disable:this line_length
+
     static let timeFrameChange: NSNotification.Name = NSNotification.Name(rawValue: "TimeFrameChangeNotification")
     static let taxYearChange: NSNotification.Name = NSNotification.Name(rawValue: "TaxYearChangeNotification")
 }

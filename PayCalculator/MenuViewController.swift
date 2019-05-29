@@ -40,13 +40,14 @@ class MenuViewController: UIViewController {
         let viewControllers = (sideMenuViewController?.contentViewController as? UINavigationController)?.viewControllers
         guard let currentViewController = navigationController?.visibleViewController else { return }
         
-        senderSwitch: switch sender {
+        switch sender {
         case input:
             var vC = viewControllers?.filter({ $0 as? ViewController != nil }).first as? ViewController
             if vC == currentViewController {
                 break
             } else if vC == nil {
-                vC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MainViewController") as? ViewController
+                vC = UIStoryboard(name: "Main", bundle: Bundle.main)
+                  .instantiateViewController(withIdentifier: "MainViewController") as? ViewController
                 _ = vC?.view
                 navigationController?.pushViewController(vC!, animated: false)
             } else {
@@ -57,9 +58,10 @@ class MenuViewController: UIViewController {
             if settingsVC == currentViewController {
                 break
             } else if settingsVC == nil {
-                settingsVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController
-                _ = settingsVC?.view
-                navigationController?.pushViewController(settingsVC!, animated: false)
+              settingsVC = UIStoryboard(name: "Main", bundle: Bundle.main)
+                .instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController
+              _ = settingsVC?.view
+              navigationController?.pushViewController(settingsVC!, animated: false)
             } else {
                 _ = navigationController?.popToViewController(settingsVC!, animated: false)
             }
@@ -83,7 +85,9 @@ extension MenuViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView == savedTable ? tableView.dequeueReusableCell(withIdentifier: "SavedCell")! : tableView.dequeueReusableCell(withIdentifier: "RecentCell")!
+        let cell = tableView == savedTable ?
+          tableView.dequeueReusableCell(withIdentifier: "SavedCell")! :
+          tableView.dequeueReusableCell(withIdentifier: "RecentCell")!
         cell.backgroundColor = UIColor.clear
         cell.textLabel?.textColor = Constants.Colours.OffWhite
         cell.textLabel?.text = "Coming soon"

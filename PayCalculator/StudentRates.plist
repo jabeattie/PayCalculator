@@ -18,7 +18,7 @@
 		<key>rate</key>
 		<real>0.09</real>
 		<key>threshold</key>
-		<integer>17335</integer>
+		<real>18935</real>
 	</dict>
 	<key>Plan2</key>
 	<dict>
@@ -27,7 +27,7 @@
 		<key>rate</key>
 		<real>0.09</real>
 		<key>threshold</key>
-		<integer>21000</integer>
+		<real>25725</real>
 	</dict>
 </dict>
 </plist>

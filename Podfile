@@ -6,16 +6,14 @@ target 'PayCalculator' do
   use_frameworks!
 
   # Pods for PayCalculator
-	#pod 'TOMSMorphingLabel', '~> 0.5'
-        #pod 'NumberMorphView'
-	#pod 'JNWSpringAnimation'
     pod 'pop'
-	pod 'Charts'
-        #pod 'BCMagicTransition'
+    pod 'Charts'
+    pod 'SwiftLint'
 
   target 'PayCalculatorTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
   end
 
   target 'PayCalculatorUITests' do

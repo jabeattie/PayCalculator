@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "embedContainer") {
+        if segue.identifier == "embedContainer" {
             containerViewController = segue.destination as? ContainerViewController
             containerViewController?.delegate = self
         }
@@ -48,10 +48,10 @@ class ViewController: UIViewController {
     
     @IBAction func didTap(_ sender: UIButton) {
         if sender == menu {
-            self.sideMenuViewController?._presentLeftMenuViewController()
+            self.sideMenuViewController?.localPresentLeftMenuViewController()
         } else if sender == previousBtn {
-            animate(animationDirection: .outRight) { [unowned self] (animation, finished) -> (Void) in
-                if (finished) {
+            animate(animationDirection: .outRight) { [unowned self] (_, finished) -> Void in
+                if finished {
                     self.containerViewController?.goToView(segue: .input)
                 }
             }
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         
     }
     
-    fileprivate func animate(animationDirection: AnimationDirection,completionBlock: ((POPAnimation?, Bool) -> (Void))?) {
+    fileprivate func animate(animationDirection: AnimationDirection, completionBlock: ((POPAnimation?, Bool) -> Void)?) {
         if let containerViewPosition = containerView.layer.pop_animation(forKey: "containerViewPosition") as? POPSpringAnimation {
             switch animationDirection {
             case .inLeft, .inRight:
@@ -89,7 +89,8 @@ class ViewController: UIViewController {
             containerView.layer.pop_add(containerViewPosition, forKey: "containerViewPosition")
         }
     }
-    
+  
+    // swiftlint:disable:next function_body_length
     func animate(button: UIView, animateIn: Bool) {
         if let buttonScale = button.layer.pop_animation(forKey: "buttonScale") as? POPSpringAnimation {
             if animateIn {
@@ -168,7 +169,7 @@ extension ViewController: ContainerViewControllerDelegate {
         case .input:
             animationDirection = .outRight
         }
-        animate(animationDirection: animationDirection) { [unowned self] (animation, finished) -> (Void) in
+        animate(animationDirection: animationDirection) { [unowned self] (_, finished) -> Void in
             if finished {
                 self.containerViewController?.goToView(segue: segue)
             }
@@ -176,11 +177,11 @@ extension ViewController: ContainerViewControllerDelegate {
         
     }
     
-    func viewLoaded(segue: Segue, callback: ((Bool) -> ())?) {
+    func viewLoaded(segue: Segue, callback: ((Bool) -> Void)?) {
         switch segue {
         case .bars:
             containerView.layer.transform = CATransform3DMakeTranslation(view.bounds.size.width, 0, 0)
-            animate(animationDirection: .inRight) { [unowned self] (animation, finished) in
+            animate(animationDirection: .inRight) { [unowned self] (_, finished) in
                 if finished {
                     callback?(true)
                     self.animate(button: self.previousBtn, animateIn: true)
@@ -189,7 +190,7 @@ extension ViewController: ContainerViewControllerDelegate {
             }
         case .input:
             containerView.layer.transform = CATransform3DMakeTranslation(-view.bounds.size.width, 0, 0)
-            animate(animationDirection: .inLeft) { [unowned self] (animation, finished) in
+            animate(animationDirection: .inLeft) { [unowned self] (_, finished) in
                 if finished {
                     self.animate(button: self.previousBtn, animateIn: false)
                 }

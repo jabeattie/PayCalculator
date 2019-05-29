@@ -9,15 +9,15 @@
 import Foundation
 
 enum TaxYearEnum: String {
-    case y1617
     case y1718
     case y1819
+    case y1920
     
     var plistName: String {
         switch self {
-        case .y1617: return "16/17"
         case .y1718: return "17/18"
         case .y1819: return "18/19"
+        case .y1920: return "19/20"
         }
     }
 }
@@ -46,7 +46,7 @@ class User {
         }
     }
     
-    var preferredTaxYear: TaxYearEnum = .y1718 {
+    var preferredTaxYear: TaxYearEnum = .y1920 {
         didSet {
             TaxYear.sharedInstance.loadYear()
             Individual.sharedInstance.update(taxCode: "\(TaxYear.sharedInstance.allowance)L")

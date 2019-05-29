@@ -32,26 +32,25 @@ class TaxYear: NSObject {
     }
     
     @objc func loadYear() {
-        if let path = Bundle.main.path(forResource: "YearRates", ofType: "plist"), let dict = NSDictionary(contentsOfFile: path) as? [String: AnyObject] {
-            print(dict)
-            var yearDict: [String: AnyObject] = dict[User.sharedInstance.preferredTaxYear.plistName] as! [String: AnyObject]
-            
-            niPT = (((yearDict["ni"] as? [String: AnyObject])?["a"] as? [String: AnyObject])?["lower"] as? [String: AnyObject])?["threshold"] as? Double ?? 0
-            niUEL = (((yearDict["ni"] as? [String: AnyObject])?["a"] as? [String: AnyObject])?["upper"] as? [String: AnyObject])?["threshold"] as? Double ?? 0
-            niPTRate = (((yearDict["ni"] as? [String: AnyObject])?["a"] as? [String: AnyObject])?["lower"] as? [String: AnyObject])?["rate"] as? Double ?? 0
-            niUELRate = (((yearDict["ni"] as? [String: AnyObject])?["a"] as? [String: AnyObject])?["upper"] as? [String: AnyObject])?["rate"] as? Double ?? 0
-            
-            taxZeroThresh = ((yearDict["tax"] as? [String: AnyObject])?["zero"] as? [String: AnyObject])?["threshold"] as? Double ?? 0
-            taxZeroRate = ((yearDict["tax"] as? [String: AnyObject])?["zero"] as? [String: AnyObject])?["rate"] as? Double ?? 0
-            taxBasicThresh = ((yearDict["tax"] as? [String: AnyObject])?["basic"] as? [String: AnyObject])?["threshold"] as? Double ?? 0
-            taxBasicRate = ((yearDict["tax"] as? [String: AnyObject])?["basic"] as? [String: AnyObject])?["rate"] as? Double ?? 0
-            taxMiddleThresh = ((yearDict["tax"] as? [String: AnyObject])?["middle"] as? [String: AnyObject])?["threshold"] as? Double ?? 0
-            taxMiddleRate = ((yearDict["tax"] as? [String: AnyObject])?["middle"] as? [String: AnyObject])?["rate"] as? Double ?? 0
-            taxUpperRate = ((yearDict["tax"] as? [String: AnyObject])?["upper"] as? [String: AnyObject])?["rate"] as? Double ?? 0
-            
-            allowance = yearDict["allowance"] as? Int ?? 0
-            salaryCap = yearDict["salaryCap"] as? Double ?? 0
-        }
+      guard let path = Bundle.main.path(forResource: "YearRates", ofType: "plist"),
+        let dict = NSDictionary(contentsOfFile: path) as? [String: Any] else { return }
+      var yearDict: [String: Any] = dict[User.sharedInstance.preferredTaxYear.plistName] as? [String: Any] ?? [:]
+      
+      niPT = (((yearDict["ni"] as? [String: Any])?["a"] as? [String: Any])?["lower"] as? [String: Any])?["threshold"] as? Double ?? 0
+      niUEL = (((yearDict["ni"] as? [String: Any])?["a"] as? [String: Any])?["upper"] as? [String: Any])?["threshold"] as? Double ?? 0
+      niPTRate = (((yearDict["ni"] as? [String: Any])?["a"] as? [String: Any])?["lower"] as? [String: Any])?["rate"] as? Double ?? 0
+      niUELRate = (((yearDict["ni"] as? [String: Any])?["a"] as? [String: Any])?["upper"] as? [String: Any])?["rate"] as? Double ?? 0
+      
+      taxZeroThresh = ((yearDict["tax"] as? [String: Any])?["zero"] as? [String: Any])?["threshold"] as? Double ?? 0
+      taxZeroRate = ((yearDict["tax"] as? [String: Any])?["zero"] as? [String: Any])?["rate"] as? Double ?? 0
+      taxBasicThresh = ((yearDict["tax"] as? [String: Any])?["basic"] as? [String: Any])?["threshold"] as? Double ?? 0
+      taxBasicRate = ((yearDict["tax"] as? [String: Any])?["basic"] as? [String: Any])?["rate"] as? Double ?? 0
+      taxMiddleThresh = ((yearDict["tax"] as? [String: Any])?["middle"] as? [String: Any])?["threshold"] as? Double ?? 0
+      taxMiddleRate = ((yearDict["tax"] as? [String: Any])?["middle"] as? [String: Any])?["rate"] as? Double ?? 0
+      taxUpperRate = ((yearDict["tax"] as? [String: Any])?["upper"] as? [String: Any])?["rate"] as? Double ?? 0
+      
+      allowance = yearDict["allowance"] as? Int ?? 0
+      salaryCap = yearDict["salaryCap"] as? Double ?? 0
     }
     
     func getTaxRate(bracket: TaxBrackets) -> Double {
@@ -79,5 +78,4 @@ class TaxYear: NSObject {
             return Double.infinity
         }
     }
-    
 }

@@ -30,9 +30,9 @@ class SettingsViewController: UIViewController {
         }
         
         switch user.preferredTaxYear {
-        case .y1617: taxYear.selectedSegmentIndex = 0
-        case .y1718: taxYear.selectedSegmentIndex = 1
-        case .y1819: taxYear.selectedSegmentIndex = 2
+        case .y1718: taxYear.selectedSegmentIndex = 0
+        case .y1819: taxYear.selectedSegmentIndex = 1
+        case .y1920: taxYear.selectedSegmentIndex = 2
         }
     }
 
@@ -40,12 +40,11 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    @IBAction func didTap(_ sender:UIButton) {
+  
+    @IBAction func didTap(_ sender: UIButton) {
         switch sender {
         case menu:
-            self.sideMenuViewController?._presentLeftMenuViewController()
+            self.sideMenuViewController?.localPresentLeftMenuViewController()
         default:
             break
         }
@@ -62,10 +61,10 @@ class SettingsViewController: UIViewController {
     }
     @IBAction func taxYearChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-        case 0: user.preferredTaxYear = .y1617
-        case 1: user.preferredTaxYear = .y1718
-        case 2: user.preferredTaxYear = .y1819
-        default: user.preferredTaxYear = .y1617
+        case 0: user.preferredTaxYear = .y1718
+        case 1: user.preferredTaxYear = .y1819
+        case 2: user.preferredTaxYear = .y1920
+        default: user.preferredTaxYear = .y1920
         }
     }
 

@@ -16,9 +16,15 @@ class BarView: UIView {
     func change(percent: Double, animated: Bool) {
         innerBarWidth.constant = CGFloat(percent)*self.frame.size.width
         if animated {
-            UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: .curveEaseOut, animations: { 
-                self.layoutIfNeeded()
-                }, completion: nil)
+            UIView.animate(withDuration: 0.5,
+                           delay: 0.0,
+                           usingSpringWithDamping: 0.7,
+                           initialSpringVelocity: 0.7,
+                           options: .curveEaseOut,
+                           animations: {
+                            self.layoutIfNeeded()
+                           },
+                           completion: nil)
         } else {
             self.setNeedsLayout()
         }

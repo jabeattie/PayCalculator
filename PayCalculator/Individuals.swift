@@ -8,12 +8,14 @@
 
 import Foundation
 
-enum Response {
-    case Success(object: AnyObject?)
-    case Failure(error: String)
-}
-
 class Individuals {
+  
+  enum Error: Swift.Error {
+    case noDestination
+    case noFile
+    case couldNotUnarchive
+    case couldNotSave
+  }
     
     private let name = "savedIndividuals"
     
@@ -25,25 +27,25 @@ class Individuals {
         preparePlistForUse()
     }
     
-    func loadSavedIndividuals() -> Response {
-        guard let destination = destPath else { return .Failure(error: "No destination path") }
-        guard let savedData = FileManager.default.contents(atPath: destination.path) else { return .Failure(error: "No file at destination path") }
+    func loadSavedIndividuals() -> Result<Void, Error> {
+      guard let destination = destPath else { return .failure(.noDestination) }
+      guard let savedData = FileManager.default.contents(atPath: destination.path) else { return .failure(.noFile) }
         
-        if let si = NSKeyedUnarchiver.unarchiveObject(with: savedData) as? [Individual] {
-            savedIndividuals = si
-            return .Success(object: nil)
-        }
-        return .Failure(error: "Could not unarchive object")
+      if let si = NSKeyedUnarchiver.unarchiveObject(with: savedData) as? [Individual] {
+          savedIndividuals = si
+          return .success(())
+      }
+      return .failure(.couldNotUnarchive)
     }
     
-    func saveSavedIndividuals() -> Response {
-        guard let destination = destPath else { return .Failure(error: "No destination path") }
+    func saveSavedIndividuals() -> Result<Void, Error> {
+        guard let destination = destPath else { return .failure(.noDestination) }
         let si = NSKeyedArchiver.archiveRootObject(savedIndividuals, toFile: destination.path)
         switch si {
         case true:
-            return .Success(object: nil)
+            return .success(())
         case false:
-            return .Failure(error: "Could not save individuals")
+            return .failure(.couldNotSave)
         }
     }
     
@@ -52,7 +54,7 @@ class Individuals {
         guard let source = sourcePath else { return }
         guard let destination = destPath else { return }
         
-        guard let _ = NSArray(contentsOf: source) else { return }
+        guard NSArray(contentsOf: source) != nil else { return }
         
         if !fm.fileExists(atPath: destination.path) {
             do {
@@ -82,11 +84,10 @@ class Individuals {
         return savedIndividuals.contains(individual)
     }
     
-    func removeIndividual(individual: Individual) -> Response {
+    func removeIndividual(individual: Individual) -> Result<Void, Error> {
         if savedIndividuals.removeObject(object: individual) {
-            return .Success(object: nil)
+            return .success(())
         }
-        return .Failure(error: "Could not remove object from saved individuals")
+        return .failure(.couldNotSave)
     }
-    
 }

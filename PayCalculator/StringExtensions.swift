@@ -9,15 +9,16 @@
 import Foundation
 
 infix operator =~
-func =~(string: String, regex: String) -> Bool {
+func =~ (string: String, regex: String) -> Bool {
     return string.range(of: regex, options: String.CompareOptions.regularExpression, range: nil, locale: Locale.current) != nil
 }
 
 extension String {
     func stringFromCamelCase() -> String {
         var string = self
-        let range = NSMakeRange(0, string.count)
-        string = (string as NSString).replacingOccurrences(of: "([a-z])([A-Z])", with: "$1 $2", options: NSString.CompareOptions.regularExpression, range: range)
+      let range = NSRange(location: 0, length: string.count)
+        string = (string as NSString)
+          .replacingOccurrences(of: "([a-z])([A-Z])", with: "$1 $2", options: NSString.CompareOptions.regularExpression, range: range)
         return string.capitalized
     }
 }

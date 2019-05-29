@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol InputViewControllerDelegate {
+protocol InputViewControllerDelegate: class {
     func calculatePressed()
     func valuesUpdated()
     func inputViewAppeared()
@@ -20,11 +20,13 @@ class InputViewController: UIViewController {
     @IBOutlet weak var salary: SlidingTextField!
     @IBOutlet weak var taxcode: UITextField!
     @IBOutlet weak var pension: UITextField!
+    @IBOutlet weak var pensionType: UISegmentedControl!
+    @IBOutlet weak var contributionCap: UITextField!
     @IBOutlet weak var studentloan: UISegmentedControl!
     @IBOutlet weak var noni: UISwitch!
     @IBOutlet weak var blind: UISwitch!
     
-    var delegate: InputViewControllerDelegate?
+    weak var delegate: InputViewControllerDelegate?
     var firstLoad = true
     
     let individual = Individual.sharedInstance
@@ -33,36 +35,44 @@ class InputViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         setup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         delegate?.inputViewAppeared()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func setup() {
+      
+        pensionType.tintColor = .pcAqua
+        studentloan.tintColor = .pcAqua
+        noni.tintColor = .pcAqua
+        blind.tintColor = .pcAqua
         
         numberFormatter.maximumFractionDigits = 0
         
-        salary.attributedPlaceholder = NSAttributedString(string: "25000", attributes: [.foregroundColor: Constants.Colours.PaleBlue])
-        taxcode.attributedPlaceholder = NSAttributedString(string: "1100L", attributes: [.foregroundColor: Constants.Colours.PaleBlue])
-        pension.attributedPlaceholder = NSAttributedString(string: "0%", attributes: [.foregroundColor: Constants.Colours.PaleBlue])
+        salary.attributedPlaceholder = NSAttributedString(string: "25000", attributes: [.foregroundColor: UIColor.pcGrey])
+        taxcode.attributedPlaceholder = NSAttributedString(string: "1100L", attributes: [.foregroundColor: UIColor.pcGrey])
+        pension.attributedPlaceholder = NSAttributedString(string: "0%", attributes: [.foregroundColor: UIColor.pcGrey])
+        contributionCap.attributedPlaceholder = NSAttributedString(string: "0", attributes: [.foregroundColor: UIColor.pcGrey])
         
         salary.delegate = self
         taxcode.delegate = self
         pension.delegate = self
+        contributionCap.delegate = self
         
-        if (individual.prePensionSalary > 0) {
+        if individual.prePensionSalary > 0 {
             salary.text = numberFormatter.string(from: individual.prePensionSalary as NSNumber)
             taxcode.text = individual.prettyTaxCode
             pension.text = (individual.pensionContribution * 100).cleanValue
+            contributionCap.text = (individual.pensionContributionCap)?.cleanValue
+            switch individual.pensionNet {
+            case true:
+              pensionType.selectedSegmentIndex = 0
+            case false:
+              pensionType.selectedSegmentIndex = 1
+            }
             switch individual.studentLoan {
             case .none:
                 studentloan.selectedSegmentIndex = 0
@@ -76,13 +86,11 @@ class InputViewController: UIViewController {
         blind.isOn = individual.blind
         noni.isOn = individual.nICode == .None
     }
-    
-    
+  
     @IBAction func didTap(_ sender: UIButton) {
         if sender == calculate {
             delegate?.calculatePressed()
         }
-        
     }
 
     @IBAction func processValues(_ sender: AnyObject) {
@@ -112,9 +120,19 @@ class InputViewController: UIViewController {
         default:
             slPlan = StudentLoanPlan.none
         }
-        
+      
+        let pensionNet: Bool
+        switch pensionType.selectedSegmentIndex {
+        case 1: pensionNet = false
+        default: pensionNet = true
+        }
+      
+        let cap = Double(contributionCap.text ?? "")
+      
+        individual.update(pensionNet: pensionNet)
         individual.update(pensionContribution: pensionDouble)
         individual.update(salary: salaryDouble)
+        individual.update(pensionContributionCap: cap)
         individual.update(niCode: niCode)
         individual.update(studentLoanPlan: slPlan)
         individual.update(taxCode: taxcodeString)
@@ -127,7 +145,7 @@ class InputViewController: UIViewController {
 
 }
 
-extension InputViewController : UITextFieldDelegate {
+extension InputViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var characterSet: CharacterSet!
@@ -138,12 +156,15 @@ extension InputViewController : UITextFieldDelegate {
         case pension:
             characterSet = CharacterSet.decimalDigits
             characterSet.insert(charactersIn: ".")
+        case contributionCap:
+            characterSet = CharacterSet.decimalDigits
+            characterSet.insert(charactersIn: ".")
         case taxcode:
             characterSet = CharacterSet.alphanumerics
         default:
             characterSet = CharacterSet.alphanumerics
         }
-        if (string.rangeOfCharacter(from: characterSet.inverted) != nil) {
+        if string.rangeOfCharacter(from: characterSet.inverted) != nil {
             return false
         }
         return true
@@ -157,13 +178,13 @@ extension InputViewController : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         guard let slidingTextField = textField as? SlidingTextField else { return }
         slidingTextField.textColor = Constants.Colours.DarkGray
-        slidingTextField.animateBackground(color: Constants.Colours.BlueTint)
+        slidingTextField.animateBackground(color: .pcAqua)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let slidingTextField = textField as? SlidingTextField else { return }
         slidingTextField.animateBackgroundOut()
-        slidingTextField.textColor = Constants.Colours.BlueTint
+        slidingTextField.textColor = .pcAqua
     }
     
 }

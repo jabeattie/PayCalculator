@@ -59,8 +59,6 @@ class ChartViewController: UIViewController {
         pieChartView.chartDescription = description
     }
     
-    
-    
     func loadChartData() {
         
         let values = individual.money.getValues(.value)

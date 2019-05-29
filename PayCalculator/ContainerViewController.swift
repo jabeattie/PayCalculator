@@ -8,10 +8,10 @@
 
 import UIKit
 
-protocol ContainerViewControllerDelegate {
+protocol ContainerViewControllerDelegate: class {
     func valuesUpdated()
     func moveToView(segue: Segue)
-    func viewLoaded(segue: Segue, callback: ((Bool) -> ())?)
+    func viewLoaded(segue: Segue, callback: ((Bool) -> Void)?)
 }
 
 enum Segue: String {
@@ -27,7 +27,7 @@ class ContainerViewController: UIViewController {
         }
     }
     
-    var delegate: ContainerViewControllerDelegate?
+    weak var delegate: ContainerViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +35,10 @@ class ContainerViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == Segue.input.rawValue) {
+        if segue.identifier == Segue.input.rawValue {
             guard let inputViewController = segue.destination as? InputViewController else { return }
             inputViewController.delegate = self
-          if (children.count > 0) {
+          if children.count > 0 {
             swapFromViewController(fromViewController: children[0], toViewController: inputViewController)
             } else {
             addChild(inputViewController)
@@ -46,7 +46,7 @@ class ContainerViewController: UIViewController {
                 view.addSubview(inputViewController.view)
             inputViewController.didMove(toParent: self)
             }
-        } else if (segue.identifier == Segue.bars.rawValue) {
+        } else if segue.identifier == Segue.bars.rawValue {
             guard let barsViewController = segue.destination as? BarsViewController else { return }
             barsViewController.delegate = self
           swapFromViewController(fromViewController: children[0], toViewController: barsViewController)
@@ -54,14 +54,14 @@ class ContainerViewController: UIViewController {
     }
     
     func setup() {
-        self.currentSegueIdentifier = Segue.input;
+        self.currentSegueIdentifier = Segue.input
     }
     
     func swapFromViewController(fromViewController: UIViewController, toViewController: UIViewController) {
       toViewController.view.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
       fromViewController.willMove(toParent: nil)
       addChild(toViewController)
-      transition(from: fromViewController, to: toViewController, duration: 0.0, options: .transitionCrossDissolve, animations: nil) { (finished) in
+      transition(from: fromViewController, to: toViewController, duration: 0.0, options: .transitionCrossDissolve, animations: nil) { (_) in
         fromViewController.removeFromParent()
         toViewController.didMove(toParent: self)
       }
@@ -98,7 +98,7 @@ extension ContainerViewController: InputViewControllerDelegate {
 }
 
 extension ContainerViewController: BarsViewControllerDelegate {
-    func barsViewAppeared(callback: ((Bool) -> ())?) {
+    func barsViewAppeared(callback: ((Bool) -> Void)?) {
         delegate?.viewLoaded(segue: .bars, callback: callback)
     }
 }

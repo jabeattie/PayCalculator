@@ -18,6 +18,7 @@
 		4A28B7FC1CF37E2200A05700 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A28B7FB1CF37E2200A05700 /* HamburgerButton.swift */; };
 		4A2CE9A71DAB991700F7DAC6 /* ChartsNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CE9A61DAB991700F7DAC6 /* ChartsNumberFormatter.swift */; };
 		4A2CE9AB1DAD205600F7DAC6 /* Array+RemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2CE9AA1DAD205600F7DAC6 /* Array+RemoveObject.swift */; };
+		4A776061229C77D3002892F3 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A776060229C77D3002892F3 /* UIColor+Additions.swift */; };
 		4AA6FBE91CF0FFD800D3A8CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6FBE81CF0FFD800D3A8CB /* AppDelegate.swift */; };
 		4AA6FBEB1CF0FFD800D3A8CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA6FBEA1CF0FFD800D3A8CB /* ViewController.swift */; };
 		4AA6FBEE1CF0FFD800D3A8CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA6FBEC1CF0FFD800D3A8CB /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		4A28B7FB1CF37E2200A05700 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		4A2CE9A61DAB991700F7DAC6 /* ChartsNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsNumberFormatter.swift; sourceTree = "<group>"; };
 		4A2CE9AA1DAD205600F7DAC6 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
+		4A776060229C77D3002892F3 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		4AA6FBE51CF0FFD800D3A8CB /* PayCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA6FBE81CF0FFD800D3A8CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AA6FBEA1CF0FFD800D3A8CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				4A2CE9AA1DAD205600F7DAC6 /* Array+RemoveObject.swift */,
 				4ADB00501E50F37500D7D33C /* EmptySegue.swift */,
 				4ADB00541E5101A500D7D33C /* Double+CleanValue.swift */,
+				4A776060229C77D3002892F3 /* UIColor+Additions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			buildConfigurationList = 4AA6FC0D1CF0FFD800D3A8CB /* Build configuration list for PBXNativeTarget "PayCalculator" */;
 			buildPhases = (
 				F26F7D2FBD6942476713F514 /* [CP] Check Pods Manifest.lock */,
+				4A77605F229C3E0F002892F3 /* SwiftLint */,
 				4AA6FBE11CF0FFD800D3A8CB /* Sources */,
 				4AA6FBE21CF0FFD800D3A8CB /* Frameworks */,
 				4AA6FBE31CF0FFD800D3A8CB /* Resources */,
@@ -343,6 +347,7 @@
 				4AA6FBF51CF0FFD800D3A8CB /* Sources */,
 				4AA6FBF61CF0FFD800D3A8CB /* Frameworks */,
 				4AA6FBF71CF0FFD800D3A8CB /* Resources */,
+				CECC092FC777EE67265770D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -471,6 +476,48 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PayCalculator/Pods-PayCalculator-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4A77605F229C3E0F002892F3 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		CECC092FC777EE67265770D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PayCalculatorTests/Pods-PayCalculatorTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PayCalculatorTests/Pods-PayCalculatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EBF129E7CBDB6B7588B3069F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AEAD0BE1D96EBB300FFD31B /* BarView.swift in Sources */,
+				4A776061229C77D3002892F3 /* UIColor+Additions.swift in Sources */,
 				4A0CEE7C1DAAC50900B3ACDA /* ChartViewController.swift in Sources */,
 				4ADB004B1E50AE3300D7D33C /* SlidingTextField.swift in Sources */,
 				4ADB00511E50F37500D7D33C /* EmptySegue.swift in Sources */,

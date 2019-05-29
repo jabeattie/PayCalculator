@@ -2,21 +2,33 @@ PODS:
   - Charts (3.3.0):
     - Charts/Core (= 3.3.0)
   - Charts/Core (3.3.0)
+  - Nimble (8.0.1)
   - pop (1.0.12)
+  - Quick (2.1.0)
+  - SwiftLint (0.32.0)
 
 DEPENDENCIES:
   - Charts
+  - Nimble
   - pop
+  - Quick
+  - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Charts
+    - Nimble
     - pop
+    - Quick
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Charts: ec1f57f9340054155691e84d4544a1d239d382c5
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
 
-PODFILE CHECKSUM: 3a413b4af022f693abcb7b56fb8734a534422444
+PODFILE CHECKSUM: 31ae3372dbd04a7d23ab26c5451dac11d2bcf80e
 
 COCOAPODS: 1.6.1

@@ -54,9 +54,10 @@ class HamburgerButton: ReactiveButton {
         
         addTarget(self, action: #selector(didTap(_:)), for: .touchUpInside)
     }
-    
+  
+    // swiftlint:disable:next function_body_length cyclomatic_complexity
     @objc func didTap(_ sender: HamburgerButton) {
-        if (open) {
+        if open {
             open = false
             
             UIView.animate(withDuration: 0.2, animations: { 
@@ -126,8 +127,7 @@ class HamburgerButton: ReactiveButton {
             
         } else {
             open = true
-            
-            
+          
             UIView.animate(withDuration: 0.2, animations: {
                 self.middle.alpha = 0.0
             })
@@ -196,6 +196,4 @@ class HamburgerButton: ReactiveButton {
             }
         }
     }
-    
-
 }

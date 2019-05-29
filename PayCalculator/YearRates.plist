@@ -231,9 +231,9 @@
 	<key>18/19</key>
 	<dict>
 		<key>name</key>
-		<string>17/18</string>
+		<string>18/19</string>
 		<key>salaryCap</key>
-		<integer>100000</integer>
+		<real>100000</real>
 		<key>allowance</key>
 		<real>1185</real>
 		<key>tax</key>
@@ -311,6 +311,95 @@
 				<dict>
 					<key>threshold</key>
 					<integer>892</integer>
+					<key>rate</key>
+					<real>0.02</real>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>19/20</key>
+	<dict>
+		<key>name</key>
+		<string>19/20</string>
+		<key>salaryCap</key>
+		<real>100000</real>
+		<key>allowance</key>
+		<integer>1250</integer>
+		<key>tax</key>
+		<dict>
+			<key>zero</key>
+			<dict>
+				<key>name</key>
+				<string>Zero</string>
+				<key>rate</key>
+				<integer>0</integer>
+				<key>threshold</key>
+				<integer>0</integer>
+			</dict>
+			<key>basic</key>
+			<dict>
+				<key>name</key>
+				<string>Zero</string>
+				<key>rate</key>
+				<real>0.2</real>
+				<key>threshold</key>
+				<integer>37500</integer>
+			</dict>
+			<key>middle</key>
+			<dict>
+				<key>name</key>
+				<string>Zero</string>
+				<key>rate</key>
+				<real>0.4</real>
+				<key>threshold</key>
+				<integer>150000</integer>
+			</dict>
+			<key>upper</key>
+			<dict>
+				<key>name</key>
+				<string>Zero</string>
+				<key>rate</key>
+				<real>0.45</real>
+				<key>threshold</key>
+				<integer>9223372036854775807</integer>
+			</dict>
+		</dict>
+		<key>ni</key>
+		<dict>
+			<key>none</key>
+			<dict>
+				<key>name</key>
+				<string>None</string>
+				<key>lower</key>
+				<dict>
+					<key>threshold</key>
+					<integer>0</integer>
+					<key>rate</key>
+					<integer>0</integer>
+				</dict>
+				<key>upper</key>
+				<dict>
+					<key>threshold</key>
+					<integer>0</integer>
+					<key>rate</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>a</key>
+			<dict>
+				<key>name</key>
+				<string>A</string>
+				<key>lower</key>
+				<dict>
+					<key>threshold</key>
+					<integer>166</integer>
+					<key>rate</key>
+					<real>0.12</real>
+				</dict>
+				<key>upper</key>
+				<dict>
+					<key>threshold</key>
+					<integer>962</integer>
 					<key>rate</key>
 					<real>0.02</real>
 				</dict>
