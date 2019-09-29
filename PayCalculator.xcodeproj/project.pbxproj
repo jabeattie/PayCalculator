@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		4A339387233F642300509E4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A339386233F642300509E4A /* AppDelegate.swift */; };
 		4A339389233F642300509E4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A339388233F642300509E4A /* SceneDelegate.swift */; };
-		4A33938B233F642300509E4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33938A233F642300509E4A /* ContentView.swift */; };
+		4A33938B233F642300509E4A /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33938A233F642300509E4A /* DetailsView.swift */; };
 		4A33938D233F642500509E4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A33938C233F642500509E4A /* Assets.xcassets */; };
 		4A339390233F642500509E4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A33938F233F642500509E4A /* Preview Assets.xcassets */; };
 		4A339393233F642500509E4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A339391233F642500509E4A /* LaunchScreen.storyboard */; };
 		4A33939E233F642500509E4A /* PayCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33939D233F642500509E4A /* PayCalculatorTests.swift */; };
 		4A3393A9233F642500509E4A /* PayCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3393A8233F642500509E4A /* PayCalculatorUITests.swift */; };
+		4A3393B7233F64B700509E4A /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3393B6233F64B700509E4A /* DetailsViewModel.swift */; };
+		4A3393B9233F9AA700509E4A /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3393B8233F9AA700509E4A /* Text+Extensions.swift */; };
+		4A3393BB233FA61200509E4A /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3393BA233FA61200509E4A /* ResultsView.swift */; };
+		4A3393BF233FC0DE00509E4A /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3393BD233FC05200509E4A /* ResultsViewModel.swift */; };
+		4A3393C22341181C00509E4A /* SegmentedInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3393C12341181C00509E4A /* SegmentedInput.swift */; };
+		4A3393C42341483B00509E4A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3393C32341483A00509E4A /* Assets.swift */; };
+		4A3393C6234148CC00509E4A /* Asset+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3393C5234148CC00509E4A /* Asset+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,7 @@
 		4A339383233F642300509E4A /* PayCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A339386233F642300509E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A339388233F642300509E4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A33938A233F642300509E4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A33938A233F642300509E4A /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		4A33938C233F642500509E4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A33938F233F642500509E4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A339392233F642500509E4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		4A3393A4233F642500509E4A /* PayCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3393A8233F642500509E4A /* PayCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayCalculatorUITests.swift; sourceTree = "<group>"; };
 		4A3393AA233F642500509E4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A3393B6233F64B700509E4A /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		4A3393B8233F9AA700509E4A /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
+		4A3393BA233FA61200509E4A /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		4A3393BD233FC05200509E4A /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		4A3393C12341181C00509E4A /* SegmentedInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedInput.swift; sourceTree = "<group>"; };
+		4A3393C32341483A00509E4A /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		4A3393C5234148CC00509E4A /* Asset+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Asset+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +113,20 @@
 		4A339385233F642300509E4A /* PayCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				4A3393C32341483A00509E4A /* Assets.swift */,
+				4A3393C02341180B00509E4A /* Views */,
 				4A339386233F642300509E4A /* AppDelegate.swift */,
-				4A339388233F642300509E4A /* SceneDelegate.swift */,
-				4A33938A233F642300509E4A /* ContentView.swift */,
 				4A33938C233F642500509E4A /* Assets.xcassets */,
-				4A339391233F642500509E4A /* LaunchScreen.storyboard */,
+				4A33938A233F642300509E4A /* DetailsView.swift */,
+				4A3393B6233F64B700509E4A /* DetailsViewModel.swift */,
 				4A339394233F642500509E4A /* Info.plist */,
+				4A339391233F642500509E4A /* LaunchScreen.storyboard */,
 				4A33938E233F642500509E4A /* Preview Content */,
+				4A3393BA233FA61200509E4A /* ResultsView.swift */,
+				4A3393BD233FC05200509E4A /* ResultsViewModel.swift */,
+				4A339388233F642300509E4A /* SceneDelegate.swift */,
+				4A3393B8233F9AA700509E4A /* Text+Extensions.swift */,
+				4A3393C5234148CC00509E4A /* Asset+Extensions.swift */,
 			);
 			path = PayCalculator;
 			sourceTree = "<group>";
@@ -136,6 +157,14 @@
 			path = PayCalculatorUITests;
 			sourceTree = "<group>";
 		};
+		4A3393C02341180B00509E4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A3393C12341181C00509E4A /* SegmentedInput.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +175,7 @@
 				4A33937F233F642300509E4A /* Sources */,
 				4A339380233F642300509E4A /* Frameworks */,
 				4A339381233F642300509E4A /* Resources */,
+				4A3393BC233FAEB900509E4A /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -262,14 +292,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A3393BC233FAEB900509E4A /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A33937F233F642300509E4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A3393C6234148CC00509E4A /* Asset+Extensions.swift in Sources */,
 				4A339387233F642300509E4A /* AppDelegate.swift in Sources */,
+				4A3393BF233FC0DE00509E4A /* ResultsViewModel.swift in Sources */,
+				4A3393BB233FA61200509E4A /* ResultsView.swift in Sources */,
+				4A3393C22341181C00509E4A /* SegmentedInput.swift in Sources */,
 				4A339389233F642300509E4A /* SceneDelegate.swift in Sources */,
-				4A33938B233F642300509E4A /* ContentView.swift in Sources */,
+				4A33938B233F642300509E4A /* DetailsView.swift in Sources */,
+				4A3393B7233F64B700509E4A /* DetailsViewModel.swift in Sources */,
+				4A3393B9233F9AA700509E4A /* Text+Extensions.swift in Sources */,
+				4A3393C42341483B00509E4A /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
