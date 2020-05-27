@@ -14,7 +14,7 @@ class DetailsViewModel: ObservableObject {
     
     @Published var title: String = "£25,000 / 1250L / 0%"
     @Published var isValid: Bool = false
-    @Published var studentLoan = SegmentedViewModel(options: ["None", "Plan 1", "Plan 2"], choice: 0)
+    @Published var studentLoan = SegmentedViewModel(options: StudentLoanPlan.allCases.map { $0.displayName }, choice: 0)
     @Published var studentLoanChoice: String = ""
     
     init() {
@@ -24,13 +24,14 @@ class DetailsViewModel: ObservableObject {
     
     var resultsViewModel: ResultsViewModel {
         let taxInfo = TaxInfo(taxCode: taxCode, isBlind: blind)
+        let studentLoanPlan = StudentLoanPlan(displayName: studentLoan.selection) ?? .none
         let individual = CalculatableIndividual(salary: Decimal(string: salary) ?? 0,
                                                 taxInfo: taxInfo,
                                                 pensionNet: false,
                                                 prePensionSalary: Decimal(string: salary) ?? 0,
                                                 pensionContribution: 0,
                                                 pensionContributionCap: 0,
-                                                studentLoanPlan: .none,
+                                                studentLoanPlan: studentLoanPlan,
                                                 niCode: .a,
                                                 timeFrame: .yearly)
         let money = Calculator().calculateValues(individual)
