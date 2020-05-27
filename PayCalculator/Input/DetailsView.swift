@@ -19,7 +19,7 @@ struct DetailsView: View {
                 VStack(alignment: .center, spacing: 30) {
                     Input()
                     Spacer()
-                    NavigationLink(destination: ResultsView(onDismiss: { self.resultsPushed.toggle() }), isActive: $resultsPushed, label: {
+                    NavigationLink(destination: resultsView, isActive: $resultsPushed, label: {
                         CalculateView()
                     })
                     .disabled(!model.isValid)
@@ -30,6 +30,10 @@ struct DetailsView: View {
             .navigationBarTitle(model.title)
             .navigationBarHidden(false)
         }
+    }
+    
+    var resultsView: ResultsView {
+        ResultsView(viewModel: model.resultsViewModel, onDismiss: { self.resultsPushed.toggle() })
     }
 }
 

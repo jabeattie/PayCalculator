@@ -22,6 +22,21 @@ class DetailsViewModel: ObservableObject {
         $studentLoanChoice.subscribe(subscriber)
     }
     
+    var resultsViewModel: ResultsViewModel {
+        let taxInfo = TaxInfo(taxCode: taxCode, isBlind: blind)
+        let individual = CalculatableIndividual(salary: Decimal(string: salary) ?? 0,
+                                                taxInfo: taxInfo,
+                                                pensionNet: false,
+                                                prePensionSalary: Decimal(string: salary) ?? 0,
+                                                pensionContribution: 0,
+                                                pensionContributionCap: 0,
+                                                studentLoanPlan: .none,
+                                                niCode: .a,
+                                                timeFrame: .yearly)
+        let money = Calculator().calculateValues(individual)
+        return ResultsViewModel(money: money)
+    }
+    
     var salary: String = "" {
         didSet {
             self.salary = limit(string: salary, to: CharacterSet.decimalDigits)

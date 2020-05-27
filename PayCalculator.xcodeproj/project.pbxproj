@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A09A996247F05AE00E673C9 /* KeyedDecodingContainer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A09A995247F05AE00E673C9 /* KeyedDecodingContainer+Extensions.swift */; };
+		4A09A998247F08C800E673C9 /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A09A997247F08C800E673C9 /* Decimal+Extensions.swift */; };
+		4A09A99A247F093F00E673C9 /* TaxInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A09A999247F093F00E673C9 /* TaxInfo.swift */; };
+		4A2095A2247EE87200C91D24 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095A1247EE87200C91D24 /* Calculator.swift */; };
+		4A2095A5247EE89700C91D24 /* TaxCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095A4247EE89700C91D24 /* TaxCode.swift */; };
+		4A2095A7247EE8A200C91D24 /* TimeFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095A6247EE8A200C91D24 /* TimeFrame.swift */; };
+		4A2095A9247EE8A700C91D24 /* NICode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095A8247EE8A700C91D24 /* NICode.swift */; };
+		4A2095AB247EE8BB00C91D24 /* StudentLoanPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095AA247EE8BB00C91D24 /* StudentLoanPlan.swift */; };
+		4A2095AD247EE8C200C91D24 /* TaxBracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095AC247EE8C200C91D24 /* TaxBracket.swift */; };
+		4A2095AF247EE8CF00C91D24 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095AE247EE8CF00C91D24 /* Money.swift */; };
+		4A2095B1247EE91400C91D24 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095B0247EE91400C91D24 /* CategoryType.swift */; };
+		4A2095B3247EE94E00C91D24 /* TaxYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095B2247EE94E00C91D24 /* TaxYear.swift */; };
+		4A2095B5247EE9A800C91D24 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095B4247EE9A800C91D24 /* User.swift */; };
+		4A2095BD247EEAD700C91D24 /* YearRates.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2095BB247EEAD700C91D24 /* YearRates.plist */; };
+		4A2095C0247EEBAD00C91D24 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2095BF247EEBAD00C91D24 /* String+Extensions.swift */; };
 		4A339387233F642300509E4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A339386233F642300509E4A /* AppDelegate.swift */; };
 		4A339389233F642300509E4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A339388233F642300509E4A /* SceneDelegate.swift */; };
 		4A33938B233F642300509E4A /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A33938A233F642300509E4A /* DetailsView.swift */; };
@@ -42,6 +57,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A09A995247F05AE00E673C9 /* KeyedDecodingContainer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+Extensions.swift"; sourceTree = "<group>"; };
+		4A09A997247F08C800E673C9 /* Decimal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extensions.swift"; sourceTree = "<group>"; };
+		4A09A999247F093F00E673C9 /* TaxInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxInfo.swift; sourceTree = "<group>"; };
+		4A2095A1247EE87200C91D24 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		4A2095A4247EE89700C91D24 /* TaxCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxCode.swift; sourceTree = "<group>"; };
+		4A2095A6247EE8A200C91D24 /* TimeFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFrame.swift; sourceTree = "<group>"; };
+		4A2095A8247EE8A700C91D24 /* NICode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NICode.swift; sourceTree = "<group>"; };
+		4A2095AA247EE8BB00C91D24 /* StudentLoanPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoanPlan.swift; sourceTree = "<group>"; };
+		4A2095AC247EE8C200C91D24 /* TaxBracket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxBracket.swift; sourceTree = "<group>"; };
+		4A2095AE247EE8CF00C91D24 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		4A2095B0247EE91400C91D24 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
+		4A2095B2247EE94E00C91D24 /* TaxYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxYear.swift; sourceTree = "<group>"; };
+		4A2095B4247EE9A800C91D24 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4A2095BB247EEAD700C91D24 /* YearRates.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = YearRates.plist; sourceTree = "<group>"; };
+		4A2095BF247EEBAD00C91D24 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		4A339383233F642300509E4A /* PayCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A339386233F642300509E4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A339388233F642300509E4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +120,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A2095A0247EE85D00C91D24 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				4A2095A1247EE87200C91D24 /* Calculator.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		4A2095A3247EE88900C91D24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A2095A4247EE89700C91D24 /* TaxCode.swift */,
+				4A2095A6247EE8A200C91D24 /* TimeFrame.swift */,
+				4A2095A8247EE8A700C91D24 /* NICode.swift */,
+				4A2095AA247EE8BB00C91D24 /* StudentLoanPlan.swift */,
+				4A2095AC247EE8C200C91D24 /* TaxBracket.swift */,
+				4A2095AE247EE8CF00C91D24 /* Money.swift */,
+				4A2095B0247EE91400C91D24 /* CategoryType.swift */,
+				4A2095B2247EE94E00C91D24 /* TaxYear.swift */,
+				4A2095B4247EE9A800C91D24 /* User.swift */,
+				4A09A999247F093F00E673C9 /* TaxInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A2095B6247EEA1300C91D24 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				4A3393C12341181C00509E4A /* SegmentedInput.swift */,
+				4A33938A233F642300509E4A /* DetailsView.swift */,
+				4A3393B6233F64B700509E4A /* DetailsViewModel.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		4A2095B7247EEA2B00C91D24 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				4A3393BA233FA61200509E4A /* ResultsView.swift */,
+				4A3393BD233FC05200509E4A /* ResultsViewModel.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		4A2095B8247EEA3900C91D24 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4A3393B8233F9AA700509E4A /* Text+Extensions.swift */,
+				4A3393C5234148CC00509E4A /* Asset+Extensions.swift */,
+				4A2095BF247EEBAD00C91D24 /* String+Extensions.swift */,
+				4A09A995247F05AE00E673C9 /* KeyedDecodingContainer+Extensions.swift */,
+				4A09A997247F08C800E673C9 /* Decimal+Extensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4A2095B9247EEAA500C91D24 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4A2095BA247EEAAD00C91D24 /* Data files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4A2095BA247EEAAD00C91D24 /* Data files */ = {
+			isa = PBXGroup;
+			children = (
+				4A2095BB247EEAD700C91D24 /* YearRates.plist */,
+			);
+			path = "Data files";
+			sourceTree = "<group>";
+		};
 		4A33937A233F642300509E4A = {
 			isa = PBXGroup;
 			children = (
@@ -113,20 +215,20 @@
 		4A339385233F642300509E4A /* PayCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				4A2095B9247EEAA500C91D24 /* Resources */,
+				4A2095B8247EEA3900C91D24 /* Common */,
+				4A2095B7247EEA2B00C91D24 /* Results */,
+				4A2095B6247EEA1300C91D24 /* Input */,
+				4A2095A3247EE88900C91D24 /* Model */,
+				4A2095A0247EE85D00C91D24 /* Engine */,
 				4A3393C32341483A00509E4A /* Assets.swift */,
 				4A3393C02341180B00509E4A /* Views */,
 				4A339386233F642300509E4A /* AppDelegate.swift */,
 				4A33938C233F642500509E4A /* Assets.xcassets */,
-				4A33938A233F642300509E4A /* DetailsView.swift */,
-				4A3393B6233F64B700509E4A /* DetailsViewModel.swift */,
 				4A339394233F642500509E4A /* Info.plist */,
 				4A339391233F642500509E4A /* LaunchScreen.storyboard */,
 				4A33938E233F642500509E4A /* Preview Content */,
-				4A3393BA233FA61200509E4A /* ResultsView.swift */,
-				4A3393BD233FC05200509E4A /* ResultsViewModel.swift */,
 				4A339388233F642300509E4A /* SceneDelegate.swift */,
-				4A3393B8233F9AA700509E4A /* Text+Extensions.swift */,
-				4A3393C5234148CC00509E4A /* Asset+Extensions.swift */,
 			);
 			path = PayCalculator;
 			sourceTree = "<group>";
@@ -160,7 +262,6 @@
 		4A3393C02341180B00509E4A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4A3393C12341181C00509E4A /* SegmentedInput.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A339393233F642500509E4A /* LaunchScreen.storyboard in Resources */,
+				4A2095BD247EEAD700C91D24 /* YearRates.plist in Resources */,
 				4A339390233F642500509E4A /* Preview Assets.xcassets in Resources */,
 				4A33938D233F642500509E4A /* Assets.xcassets in Resources */,
 			);
@@ -319,15 +421,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3393C6234148CC00509E4A /* Asset+Extensions.swift in Sources */,
+				4A2095C0247EEBAD00C91D24 /* String+Extensions.swift in Sources */,
+				4A2095A9247EE8A700C91D24 /* NICode.swift in Sources */,
 				4A339387233F642300509E4A /* AppDelegate.swift in Sources */,
+				4A2095A7247EE8A200C91D24 /* TimeFrame.swift in Sources */,
 				4A3393BF233FC0DE00509E4A /* ResultsViewModel.swift in Sources */,
+				4A2095AB247EE8BB00C91D24 /* StudentLoanPlan.swift in Sources */,
+				4A2095A2247EE87200C91D24 /* Calculator.swift in Sources */,
+				4A2095AF247EE8CF00C91D24 /* Money.swift in Sources */,
+				4A2095B5247EE9A800C91D24 /* User.swift in Sources */,
 				4A3393BB233FA61200509E4A /* ResultsView.swift in Sources */,
+				4A2095AD247EE8C200C91D24 /* TaxBracket.swift in Sources */,
 				4A3393C22341181C00509E4A /* SegmentedInput.swift in Sources */,
+				4A09A998247F08C800E673C9 /* Decimal+Extensions.swift in Sources */,
+				4A2095B3247EE94E00C91D24 /* TaxYear.swift in Sources */,
 				4A339389233F642300509E4A /* SceneDelegate.swift in Sources */,
 				4A33938B233F642300509E4A /* DetailsView.swift in Sources */,
+				4A09A99A247F093F00E673C9 /* TaxInfo.swift in Sources */,
+				4A2095A5247EE89700C91D24 /* TaxCode.swift in Sources */,
+				4A09A996247F05AE00E673C9 /* KeyedDecodingContainer+Extensions.swift in Sources */,
 				4A3393B7233F64B700509E4A /* DetailsViewModel.swift in Sources */,
 				4A3393B9233F9AA700509E4A /* Text+Extensions.swift in Sources */,
 				4A3393C42341483B00509E4A /* Assets.swift in Sources */,
+				4A2095B1247EE91400C91D24 /* CategoryType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

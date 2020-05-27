@@ -10,7 +10,12 @@ import SwiftUI
 
 struct ResultsView: View {
     var onDismiss: () -> Void
-    @ObservedObject var viewModel = ResultsViewModel()
+    @ObservedObject var viewModel: ResultsViewModel
+    
+    init(viewModel: ResultsViewModel, onDismiss: @escaping () -> Void) {
+        self.viewModel = viewModel
+        self.onDismiss = onDismiss
+    }
 
     var btnBack : some View {
         Button(action: {
@@ -30,11 +35,11 @@ struct ResultsView: View {
                 SegmentedInput(viewModel: self.$viewModel.period).frame(maxWidth: .infinity)
                 Divider()
                 BarChartView(bars: [
-                    Bar(id: UUID(), value: 50, label: "Pension", color: Asset.pension.uiColor),
-                    Bar(id: UUID(), value: 25, label: "Tax", color: Asset.tax.uiColor),
-                    Bar(id: UUID(), value: 15, label: "NI", color: Asset.nationalInsurance.uiColor),
-                    Bar(id: UUID(), value: 40, label: "Student loan", color: Asset.studentLoan.uiColor),
-                    Bar(id: UUID(), value: 200, label: "Take home", color: Asset.takeHomePay.uiColor)
+                    Bar(id: UUID(), value: viewModel.pension, label: "Pension", color: Asset.pension.uiColor),
+                    Bar(id: UUID(), value: viewModel.tax, label: "Tax", color: Asset.tax.uiColor),
+                    Bar(id: UUID(), value: viewModel.ni, label: "NI", color: Asset.nationalInsurance.uiColor),
+                    Bar(id: UUID(), value: viewModel.studentLoan, label: "Student loan", color: Asset.studentLoan.uiColor),
+                    Bar(id: UUID(), value: viewModel.takeHome, label: "Take home", color: Asset.takeHomePay.uiColor)
                 ])
                     .frame(minHeight: 400, maxHeight: .infinity)
                 Spacer()
@@ -63,7 +68,7 @@ struct BarChartView: View {
 
 struct BarsView: View {
     let bars: [Bar]
-    let max: Double
+    let max: Decimal
 
     init(bars: [Bar]) {
         self.bars = bars
@@ -83,7 +88,7 @@ struct BarsView: View {
                         }
                         Rectangle()
                             .fill(bar.color)
-                            .frame(width: CGFloat(bar.value) / CGFloat(self.max) * geometry.size.width, height: 5)
+                            .frame(width: (bar.value / self.max).cgFloat * geometry.size.width, height: 5)
                             .accessibility(label: Text(bar.label))
                             .accessibility(value: Text(bar.label))
                     }
@@ -93,18 +98,19 @@ struct BarsView: View {
         }
     }
     
-    private func formatted(value: Double) -> String {
+    private func formatted(value: Decimal) -> String {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 2
         formatter.locale = Locale.current
+        formatter.currencyCode = Locale.current.currencyCode
         formatter.numberStyle = .currency
-        return formatter.string(from: NSNumber(value: value)) ?? ""
+        return formatter.string(from: value as NSDecimalNumber) ?? ""
     }
 }
 
 struct Bar: Identifiable {
     let id: UUID
-    let value: Double
+    let value: Decimal
     let label: String
     let color: Color
 }
